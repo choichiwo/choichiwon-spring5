@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="APEX$_WS_WEBPG_SECTIONS" directorySegmentName="seg_0" id="6BFD84C0-6B83-7A60-91CC-DE9A4978D7CA">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE81B3E9-C61C-0F81-8867-A136EC8D9CC8</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="UPDATED_ON" id="022A5BB4-2F24-2CE0-5793-281AD05FF5A9">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPDATED_BY" id="1DA51F92-D77A-BDD2-A894-49C6B370E05A">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_TYPE" id="27520CC0-80B7-23EF-26C8-C594753D60A8">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="40B5D2D8-0956-CA8C-4200-79A6E801992C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_GRID_ID" id="445667AA-35F5-C8AF-051B-B4035AE66160">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LABEL_AXIS_TITLE" id="7398A6EF-FA1C-3C8C-6F41-866F0CD1A57E">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_SECTION_STYLE" id="76E92B3A-28CB-4E5E-5FDF-69C4DEBFEB17">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTENT_UPPER" id="79D70EAA-B30E-4719-406F-AEA976AD9BD8">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WEBPAGE_ID" id="7D36DA42-181B-D229-614F-7F659F369FC3">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAV_INCLUDE_LINK" id="8D8D24E3-42EE-395F-C3AC-F62C9D04FFE5">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAV_MAX_LEVEL" id="8DC94134-2E96-A393-AE17-91CA93F36320">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DISPLAY_SEQUENCE" id="9CA4CB39-26FC-A668-4BC7-18651D5AEEE4">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REPORT_ID" id="A7E0B839-7DB2-151F-9335-2B5F4F64BD1A">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WS_APP_ID" id="A971147A-F411-D899-314A-BAFE0D604E67">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREATED_BY" id="B3A11969-925C-F9BA-B041-45597C5266B5">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTENT" id="CD1EA433-2A25-C3A1-2DAF-66F47F126121">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAV_START_WEBPAGE_ID" id="D394929D-DF8D-DBA0-9CB4-6A4E4B077124">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_VALUE" id="D57BEEC2-04EE-11A8-3383-E4F20447DB30">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECTION_TYPE" id="D856B863-6518-B579-1A5C-5C1C12894F8C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="D947E449-1BDA-C054-CB67-149F2141C705">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_SORTING" id="DD488E6B-600B-DAA5-8594-2BFD1BD4E0B3">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VALUE_AXIS_TITLE" id="E185711B-0FFC-9A80-9C60-18A9BE04871B">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_LABEL" id="E6A205EC-60FA-F055-92AE-D4BD9796009C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_3D" id="EDF19C80-B661-4C1F-F269-AE5B33A6D4FF">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHART_AGGREGATE" id="F4833363-02EF-08D9-F204-3E88691C43CA">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREATED_ON" id="F6DF8F11-D92D-8057-ECDD-A77D0A403E84">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APEX$_WS_WEBPG_SECTIONS_PK" id="95C65C21-5F0B-E2CE-6112-C43452FF1500">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</IndexProxy>
+</indexProxies>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000020098C00007$$" id="0AE38584-5891-8291-00B4-E9054D1F0D25">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:05 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>CONTENT</column>
+<logging>YES</logging>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</LobStorage>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000020098C00008$$" id="24F7D105-1D9C-B0F4-8ABB-6274299FE32E">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:05 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>CONTENT_UPPER</column>
+<logging>YES</logging>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</LobStorage>
+</lobStorages>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="APEX$_WS_WEBPG_SECTIONS_PK" id="C65DB7A9-0276-8A08-07F8-A518E3839DFA">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+<existingIndex>95C65C21-5F0B-E2CE-6112-C43452FF1500</existingIndex>
+<indexSegment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,205 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6BD89231-F72D-EA1D-8345-CC19410DB8F5" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_PRODUCT_INFO">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_PRODUCT_INFO</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>EABD46EE-93FD-EB3F-AA5D-3ADCAEA9BD64</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCT_ID" id="8BD63DFE-9E9B-A935-598C-053531C99392">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>PRODUCT_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>CC5E16CB-92B6-C015-BF06-709528B84130</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_NAME" id="5951FF94-C4B6-884F-CFFF-72FA85A8C587">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>PRODUCT_NAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>5AFEA7B1-CB26-A9F8-490A-D031EECB7AA3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_DESCRIPTION" id="31E8079F-287C-D998-0FA7-5098F460E334">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>PRODUCT_DESCRIPTION</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>3DEF8F40-5535-F85E-AD7B-A31370C131F8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORY" id="4386C2E0-417D-6254-BD94-D6DFDF234BC0">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>CATEGORY</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>1DA58296-9E78-CD76-1F0A-699D1DCF4744</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_AVAIL" id="42DF4D4F-8AE9-2D70-88BD-8494F61ECFC9">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>PRODUCT_AVAIL</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F888DDF1-52DE-B130-4B65-44024719295E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LIST_PRICE" id="576CFD7E-CF8E-B796-EF83-C9894AD6DE67">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>LIST_PRICE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>62C6FEBE-1150-5413-EED9-89BE5CDC2E5F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_IMAGE" id="4613D308-5116-A311-7D6E-566E26B8F982">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>PRODUCT_IMAGE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>5DF82DD0-A289-C4E5-0F77-4CA84512D4DF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIMETYPE" id="2319953A-85A5-E991-83D6-D41D1E12682A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>MIMETYPE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>E432A6DF-047E-F63C-725D-4FF72527642D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FILENAME" id="0E7530FC-B48D-B74A-0101-9E405B0C04A0">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>FILENAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>3E5002A1-F036-9979-DA59-CE110400446F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 BYTE</dataTypeSize>
+<ownDataTypeParameters>400 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGE_LAST_UPDATE" id="D0C0CE99-0AA6-5B79-23AA-4999BB68DB44">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_PRODUCT_INFO</sourceObjSchema>
+<sourceObjName>IMAGE_LAST_UPDATE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>0353BEFF-6F9A-2150-B103-DD6742AE5395</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96B44F37-C9F8-BE14-BEED-5879679594EC" name="DEMO_PRODUCT_INFO_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_PRODUCT_INFO_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>884BF86F-B280-991F-E582-771D1784C7E4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BD63DFE-9E9B-A935-598C-053531C99392"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DDC7A959-82E8-CD99-1917-A905F177FE60" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_PRODUCT_INFO_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_PRODUCT_INFO_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>36A977F9-B036-73C4-54FF-3AA25CE1D072</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BD63DFE-9E9B-A935-598C-053531C99392"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

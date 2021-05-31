@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="APEX$_WS_WEBPG_SECTION_HISTORY" directorySegmentName="seg_0" id="021928EA-05F6-4B85-D5B2-AF72227095F2">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE81B3E9-C61C-0F81-8867-A136EC8D9CC8</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NEW_TITLE" id="260A0C42-1427-B7CB-A5A1-E62F3D9A47AF">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OLD_DISPLAY_SEQUENCE" id="2A131BD9-2C86-0712-E7FD-82677D48ED9C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NEW_CONTENT" id="2D41CEBA-0059-FDC1-E81B-22CE5F1624F7">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NEW_DISPLAY_SEQUENCE" id="4545765A-4328-D6AA-50F2-C447185E313C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WS_APP_ID" id="4608509E-2D30-5342-EAA9-DF4E0809E133">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OLD_CONTENT" id="6D5ABA5A-69A7-D503-76A5-AD5CACDFD589">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OLD_TITLE" id="716E6DDB-6714-03FD-A76F-93EE1CAFDDF8">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="APPLICATION_USER_ID" id="9F5875FE-D6AD-9062-06C9-B546AAB0321C">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECTION_ID" id="CD6AA009-382D-D946-B47A-98BF6F464FE7">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WEBPAGE_ID" id="D4B51EB9-FDE9-D4C5-370B-F9149416C10F">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHANGE_DATE" id="E7FCE1CC-B97E-84D9-8C10-39AE977D0C64">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APEX$_WS_WEBPG_SECHIST_IDX1" id="DE20041F-A532-8C09-0940-CA414202F725">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</IndexProxy>
+</indexProxies>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000020123C00008$$" id="7175CD01-F8FD-BD6B-68D2-310161458616">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:05 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>OLD_CONTENT</column>
+<logging>YES</logging>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</LobStorage>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000020123C00009$$" id="DE90074D-13F4-A19C-FA0B-FC850365BC76">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:05 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>NEW_CONTENT</column>
+<logging>YES</logging>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</LobStorage>
+</lobStorages>
+</TableProxyOraclev11g>

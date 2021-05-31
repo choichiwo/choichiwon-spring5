@@ -5,4 +5,27 @@
 <ownerDesignName>SPRING5</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>7B6E4B14-6CDA-63D3-4537-4B1EEF993CF0</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="CC69C685-7064-ACF9-B716-DBFC7072280A">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="FB5F9A46-1264-78BB-ED57-C556782DD4B6">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="34C3E8A6-162F-971E-5A1C-68F852C43830">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B4AB11A2-7243-70DD-2B92-915A1B80AC10">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8E1765D7-CD1D-13FC-35F2-3E7D69BF3034">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="070A9C0D-450D-5A46-49EE-AA8E72828016">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B2DBF4C5-50E3-F24D-3BE8-CABDCB23BAC9">
+<designStoragePath>C:\egov\workspace\choichiwon-spring5\DATABASES</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

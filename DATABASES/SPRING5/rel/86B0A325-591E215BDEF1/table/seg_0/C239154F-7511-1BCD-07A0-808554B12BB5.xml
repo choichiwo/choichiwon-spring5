@@ -1,0 +1,254 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C239154F-7511-1BCD-07A0-808554B12BB5" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_CUSTOMERS">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_CUSTOMERS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>3B5F7F31-B5A2-899B-AA16-06ABFAAC49BC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUSTOMER_ID" id="8146E897-17EA-AC60-BA2C-12F26E8A33A8">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUSTOMER_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>55E113D9-40C0-9DEE-2B69-0802CF0C7322</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_FIRST_NAME" id="6D90C76C-03AD-C908-DA9C-2303AAE8078A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_FIRST_NAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>7F6A2BEC-07FF-8895-9D05-6ED84E8D59F0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_LAST_NAME" id="E871FF5D-E495-3493-C31F-579EBCB1F71D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_LAST_NAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>D1DFF5A0-FFB6-1AC3-820D-F49DA321519C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_STREET_ADDRESS1" id="F7F4A360-E0A1-3F46-2160-AC23A319E738">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_STREET_ADDRESS1</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>5B391401-DD10-4CF7-86C8-4A42E951FBEE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_STREET_ADDRESS2" id="5C24EA5D-EC32-E260-C15C-B90A73308989">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_STREET_ADDRESS2</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>2B8E21B8-822D-E275-1297-34827C4A27A2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_CITY" id="52DDE595-1245-81BE-2308-33125A9E32E0">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_CITY</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>195BDF90-559C-F2AB-24D4-741A6B9EA787</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_STATE" id="C6FDA5BD-260F-6BAD-4437-26A7B1FA309A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_STATE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>6FFB8EF8-10BE-78EE-8807-6A9E5973AA4D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_POSTAL_CODE" id="0814D083-91E7-F854-CE36-BBEFD9380DE5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_POSTAL_CODE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>7F4E02F4-B4AB-F093-205D-6727A63B5EDA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE_NUMBER1" id="26E70A48-937F-41EA-3200-C9BCD445B4C0">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER1</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>A309D4D3-27A0-CC4C-0528-DCDF8B82B653</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE_NUMBER2" id="7D2DFADD-EB38-2FDA-295D-8339FCE1EE3C">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER2</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>3CF47458-D1C9-7BCC-D069-895CA050F90B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREDIT_LIMIT" id="99D08E04-FE6C-52F4-80DE-1765E99CD1A9">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CREDIT_LIMIT</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>40194B39-9B2A-9853-EA2A-ADFBB76E00A2</importedID>
+<constraintName>DEMO_CUST_CREDIT_LIMIT_MAX</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="credit_limit &lt;= 5000"/>
+<implementationDef dbType="Oracle Database 11g" definition="credit_limit &lt;= 5000"/>
+</checkConstraint>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUST_EMAIL" id="20604CB4-B5DC-AE98-8D66-63354D5E0F98">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_CUSTOMERS</sourceObjSchema>
+<sourceObjName>CUST_EMAIL</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>2B994410-FAB4-6BCE-C6CE-48AFBFA2076D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AD6642CC-8485-A30A-143F-AEC2DF4D45C5" name="DEMO_CUSTOMERS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_CUSTOMERS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>EB715E00-6935-847A-52B8-B4E7E7DA9D7D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8146E897-17EA-AC60-BA2C-12F26E8A33A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3183CB6C-1E11-5EF9-120A-CC047829B8A1" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_CUSTOMERS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_CUSTOMERS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>4E5D6DFE-DC4A-CE62-221B-FEBDB4F4B561</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8146E897-17EA-AC60-BA2C-12F26E8A33A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1736A3B7-8110-52F6-4EC1-4BDA94344DCE" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_CUST_NAME_IX">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_CUST_NAME_IX</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>5C2016F1-A846-5B16-4710-F513073DA188</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E871FF5D-E495-3493-C31F-579EBCB1F71D"/>
+<colUsage columnID="6D90C76C-03AD-C908-DA9C-2303AAE8078A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

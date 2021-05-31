@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="DEMO_ORDER_ITEMS_GET_PRICE" directorySegmentName="seg_0" id="AD28057E-7375-DB78-5858-DD27113A6905">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_ORDER_ITEMS_GET_PRICE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[declare
+  l_list_price number;
+begin
+-- First, we need to get the current list price of the order line item
+select list_price into l_list_price from demo_product_info
+  where product_id = :new.product_id;
+
+-- Once we have the correct price, we will update the order line with the correct price
+:new.unit_price := l_list_price;
+
+end;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<table>84D21C15-287A-ECC1-D2F8-2C54D14C7027</table>
+</TriggerOraclev10g>

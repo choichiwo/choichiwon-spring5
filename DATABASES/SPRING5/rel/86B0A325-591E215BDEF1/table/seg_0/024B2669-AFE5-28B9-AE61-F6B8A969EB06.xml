@@ -1,0 +1,388 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="024B2669-AFE5-28B9-AE61-F6B8A969EB06" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="APEX$_WS_FILES">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>43BA55A4-9D0B-79A3-8EA9-E074B02490F7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="32EB100D-8320-0792-1F31-190865E1720C">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>A28126F7-4971-0266-3AC0-92CBB4128B35</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WS_APP_ID" id="0A709360-36AA-E443-6B10-99DEA1C838F2">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>WS_APP_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>E8AA23EF-50BC-4ECF-672F-18C55E401DFF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_GRID_ID" id="EC30BAB2-3AC4-6EF6-52D2-DFA8477B6A21">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>DATA_GRID_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>6CC7C492-A8B5-C601-1B1F-FDF7BA2BD0C0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_ID" id="61131D24-4DAF-6F96-BB7E-33358D9AF9A7">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>ROW_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>9EB6B775-C83C-C4DC-D16F-DF9B57874E3F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29AD7A75-18F2-1681-919D-86ECACDC6EBD" referredColumn="7BF2D109-FC98-E8AD-CDCE-9B829B2A11DD"/>
+</associations>
+</Column>
+<Column name="WEBPAGE_ID" id="B7769278-D1C1-A2E9-5518-1122EFA397C3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>WEBPAGE_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>A97A0CDB-75A8-15E2-B958-A5E103F77006</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMPONENT_LEVEL" id="91CCE43A-D726-4026-A7C1-DB56D5DFDA27">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>COMPONENT_LEVEL</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>3E5899F5-93DA-B414-560E-C2DFE029E46B</importedID>
+<constraintName>APEX$_WS_FILES_CL_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;ROW&apos;" description=""/>
+<valueDef value="&apos;WEBPAGE&apos;" description=""/>
+<valueDef value="&apos;WEBSHEET&apos;" description=""/>
+<valueDef value="&apos;WORKSPACE&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="7D9C257F-2BA1-28E7-3AA6-6433E4B403A5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>CDD85FE0-1808-74B2-A3A3-70AEB590790B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGE_ALIAS" id="1BD2A9A1-8FF7-DA5F-C379-61D1893C19AC">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>IMAGE_ALIAS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>6D4E2835-16EE-1805-D00A-0A9A1F987869</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGE_ATTRIBUTES" id="2236914F-6CF1-C416-0DBE-8E50472C0AE5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>IMAGE_ATTRIBUTES</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>313AE820-BB5D-97BE-D350-E685DD50D828</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT" id="EEFD9A2B-2BD9-C0BE-D330-91C29B795C8F">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CONTENT</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>D44997C9-F544-9F46-38F7-D38D68C51F47</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT_LAST_UPDATE" id="AFF8475D-5086-7C02-1C91-F785C2AB0223">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CONTENT_LAST_UPDATE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>84FB8D27-6CEA-6893-414A-092051D0951A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIME_TYPE" id="8CEED880-CCFD-3524-3D24-059B0B180BC3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>MIME_TYPE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>DCBCC680-D0FF-328B-5C3E-12E9C79A8775</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT_CHARSET" id="A39CE6AE-C2C8-2514-42E8-AE6EE319CA15">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CONTENT_CHARSET</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>4DD8CFE9-92E1-26B6-464C-65A4CD287E76</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT_FILENAME" id="1F55D8F3-31F3-C24E-2410-43DFCF4E5373">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CONTENT_FILENAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>23607EE1-472E-8326-CE86-1E8E20346CA1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPTION" id="25B278F5-9DF4-7853-A4F2-94B9B822CA39">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>DESCRIPTION</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>BA62A1F9-7CFF-DBA4-BC23-E7EDF1DAF658</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="726FBD1F-89AD-31B3-724F-936855055E72">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CREATED_ON</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>D45E254E-A031-9A55-75A0-51E0A4BDD1D6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_BY" id="E749BED0-F94B-2761-3871-AF161689AEE5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>CREATED_BY</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>CE57737B-E0C6-3CBB-D32F-829B197373DA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPDATED_ON" id="118B6626-4002-1C1E-7463-9A51B6F83111">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>UPDATED_ON</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>99FCCE5C-7219-C679-5360-9623B240D304</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPDATED_BY" id="D943F480-F9FD-8892-AC16-FFB51F82E96B">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>APEX$_WS_FILES</sourceObjSchema>
+<sourceObjName>UPDATED_BY</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F8DBE14E-9F1A-F00B-F9E6-B6058535C2F6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="131DB155-8C56-C1FC-C2EE-4AC714A9CA93" name="APEX$_WS_FILES_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>17A96765-0BDD-F1CB-CC14-5FB57449E1DF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32EB100D-8320-0792-1F31-190865E1720C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BADC7D1-B540-23B9-322E-A48C45DD8D76" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="APEX$_WS_FILES_IDX1">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_IDX1</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>DC40528C-2564-46A2-1849-8A4C53C6BB61</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A709360-36AA-E443-6B10-99DEA1C838F2"/>
+<colUsage columnID="EC30BAB2-3AC4-6EF6-52D2-DFA8477B6A21"/>
+<colUsage columnID="61131D24-4DAF-6F96-BB7E-33358D9AF9A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CCE9DCD-39DE-9796-E70C-04E04393DA7C" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="APEX$_WS_FILES_IDX2">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_IDX2</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>2B0233DD-4EAA-ADE9-BED4-9A56F4BE520D</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A709360-36AA-E443-6B10-99DEA1C838F2"/>
+<colUsage columnID="B7769278-D1C1-A2E9-5518-1122EFA397C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA2C4B46-6A7C-F77B-281A-686A638F28A5" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="APEX$_WS_FILES_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>70B499D7-FDD9-0181-0507-D935CE396574</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32EB100D-8320-0792-1F31-190865E1720C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D1AE740-DA8C-116F-C1B0-28BAE0121001" name="APEX$_WS_FILES_FK">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61131D24-4DAF-6F96-BB7E-33358D9AF9A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

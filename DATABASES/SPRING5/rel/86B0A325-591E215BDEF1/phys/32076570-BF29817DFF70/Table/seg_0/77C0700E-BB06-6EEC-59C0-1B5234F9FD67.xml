@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="APEX$_WS_TAGS" directorySegmentName="seg_0" id="77C0700E-BB06-6EEC-59C0-1B5234F9FD67">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE81B3E9-C61C-0F81-8867-A136EC8D9CC8</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATA_GRID_ID" id="08BD4885-04E4-76ED-54F6-82507993B2CD">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="2AB8E49C-4E60-F270-60D2-9635B734A22D">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMPONENT_LEVEL" id="309AB032-6F3B-B9C5-31F0-03B470E2E3EB">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPDATED_ON" id="5824D35A-A706-0385-F3A5-1370B665F86B">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WS_APP_ID" id="72A401F0-0C5C-F4CB-1B85-E12C75E15743">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREATED_ON" id="B42ADEE2-BF1D-CA9F-1B51-922A255D59F5">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TAG" id="B95B7A2E-6C09-0317-D23D-17080C2D3C7E">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPDATED_BY" id="CAC865DE-D1D9-7335-7AA1-6F0498381DA8">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WEBPAGE_ID" id="D0E8B293-57B2-5724-7B3B-5F160147BE62">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREATED_BY" id="DF39D863-5C66-558B-FC3D-CAD9C1EC6232">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ROW_ID" id="E96D3E8E-05D7-C7D5-7ED1-79D3B311E4ED">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APEX$_WS_TAGS_IDX1" id="5C9AB856-A314-78D5-474F-1F8B8733D6C9">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APEX$_WS_TAGS_PK" id="606494D2-6F94-2935-8DE0-0BEE669707E3">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APEX$_WS_TAGS_IDX2" id="9F4AB7D8-AAA5-9894-B9D6-76881161BD20">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>A6DA84F7-0121-F5D5-F444-2A441F732172</schemaObject>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="APEX$_WS_TAGS_FK" id="3F2335BE-E3C0-A682-2EE8-862DFB60779B">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="APEX$_WS_TAGS_PK" id="8615527D-243F-1145-CCAF-FECBE1835F08">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<segment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</segment>
+<tableSpace>4B3B2B08-9317-BA8F-59CA-455ACDE282BE</tableSpace>
+<existingIndex>606494D2-6F94-2935-8DE0-0BEE669707E3</existingIndex>
+<indexSegment>C9EA5EA0-8055-F94B-EB06-DB0BDF910426</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84D21C15-287A-ECC1-D2F8-2C54D14C7027" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_ORDER_ITEMS">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_ORDER_ITEMS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>7B519CAF-8A29-953D-F725-0931CBCB2569</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ORDER_ITEM_ID" id="DD8459E2-B85F-DA27-9177-C1416BBA62EB">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_ORDER_ITEMS</sourceObjSchema>
+<sourceObjName>ORDER_ITEM_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>8DBAD73E-AC08-C13B-B65D-875A2171BB3A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDER_ID" id="0D253CCD-03A4-7E6E-2F1A-3829146A138A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_ORDER_ITEMS</sourceObjSchema>
+<sourceObjName>ORDER_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>6B387ECE-6E19-C73B-1FB1-66418BB614D7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EB18AEC-58DA-AFAE-C707-62BE5F4DC183" referredColumn="624D9742-6C18-D90F-7616-137C6C52F9A5"/>
+</associations>
+</Column>
+<Column name="PRODUCT_ID" id="91B4FD01-A68D-6C9C-E266-46E2E572A007">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_ORDER_ITEMS</sourceObjSchema>
+<sourceObjName>PRODUCT_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>BAD07A63-B565-F7F3-CF73-F4681CED6853</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E8CE4B7D-3EAF-41CA-C2CD-1760C94BF93E" referredColumn="8BD63DFE-9E9B-A935-598C-053531C99392"/>
+</associations>
+</Column>
+<Column name="UNIT_PRICE" id="275E40D1-6A01-843D-F8F1-C1F548463F8A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_ORDER_ITEMS</sourceObjSchema>
+<sourceObjName>UNIT_PRICE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>6DFFE3D2-7AEE-29E8-3B73-2D1F882A14FB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="9C00D247-3853-0E18-2F27-1C5527461CE9">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_ORDER_ITEMS</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>81CF1B40-4BCF-951D-2587-E4E04644D0D8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,8,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9867F79F-B40A-0557-F5B9-DF1099CBE7D5" name="DEMO_ORDER_ITEMS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_ORDER_ITEMS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>A43F53CF-0ECA-07DA-D9CA-146492C7CB85</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD8459E2-B85F-DA27-9177-C1416BBA62EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36DC34BB-3388-1D9D-BCAC-47E3E4659C88" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_ORDER_ITEMS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_ORDER_ITEMS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>676BE9D7-09F8-1F63-57D4-723DAB23E243</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD8459E2-B85F-DA27-9177-C1416BBA62EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2ACFC709-2A31-31F6-1543-9337EF2F016C" name="DEMO_ORDER_ITEMS_FK">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D253CCD-03A4-7E6E-2F1A-3829146A138A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F871A9B-6956-B94D-5E53-85178C68AA4E" name="DEMO_ORDER_ITEMS_PRODUCT_ID_FK">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91B4FD01-A68D-6C9C-E266-46E2E572A007"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

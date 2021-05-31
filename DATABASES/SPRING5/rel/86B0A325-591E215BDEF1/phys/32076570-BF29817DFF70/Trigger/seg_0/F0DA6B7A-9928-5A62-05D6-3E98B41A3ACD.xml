@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="APEX$_WS_LINKS_T1" directorySegmentName="seg_0" id="F0DA6B7A-9928-5A62-05D6-3E98B41A3ACD">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_LINKS_T1</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from dual;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    end if;
+end;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<table>5493ED60-CA33-F9C1-93F7-8EF8C98FDDC5</table>
+</TriggerOraclev10g>

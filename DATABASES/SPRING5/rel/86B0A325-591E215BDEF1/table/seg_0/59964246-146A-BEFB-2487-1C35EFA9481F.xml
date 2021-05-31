@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59964246-146A-BEFB-2487-1C35EFA9481F" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_USERS">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_USERS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>717DB251-D93A-5714-ACF4-9575DF05B746</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="00BC76D7-CABD-AB27-04C0-FA808F903188">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>25FEE003-B4BA-AE3D-B896-584FC0009618</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_NAME" id="670EA30F-4A71-44F9-B417-64817672D88D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>USER_NAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>A7926E83-8CAD-2531-41D3-6C407F211CF8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="42555F4F-D427-BD42-0F76-2B801F98DCDC">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>D78E0B51-492B-C683-C6BB-9CE093BC265B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="4BB391F0-EE8A-100A-44CD-1990121CF302">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>CREATED_ON</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>BF614DC6-BB58-72ED-255C-305CC79F7115</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUOTA" id="3B38C230-1249-232F-1DFB-A25EE000F793">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>QUOTA</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>30BB680C-3232-FC07-C58C-0140AE297FB1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTS" id="B1D1A395-D671-A91A-DA2A-8E87714CE8A7">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>PRODUCTS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>82D31080-1DCA-4B1D-C331-06204F127FB7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRES_ON" id="CD540B95-FDC4-9A6F-AD90-4C2DBA7E6CB1">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>EXPIRES_ON</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>E4725A48-0C62-33D1-36A9-4BDDB1AA7B03</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADMIN_USER" id="65926AE2-E761-EB25-84A5-EB5B2479653A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>DEMO_USERS</sourceObjSchema>
+<sourceObjName>ADMIN_USER</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>59C89FD2-9D3C-9568-B4E0-188B715F4781</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A9D90C5F-5CEC-0F31-9D5B-F2CE90CFA011" name="DEMO_USERS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_USERS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>0844D26F-A728-DAA3-F7D3-E4D093AF18CA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00BC76D7-CABD-AB27-04C0-FA808F903188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55075D02-5B75-033B-3B2F-94263E43ACD5" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="DEMO_USERS_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>DEMO_USERS_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>90F37B76-2E62-F217-9642-F1BD0EBF2E3A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00BC76D7-CABD-AB27-04C0-FA808F903188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="INSERT_DEMO_PROD" directorySegmentName="seg_0" id="65EA1DB5-89B0-99CE-8371-2E5F2D18E9C5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>INSERT_DEMO_PROD</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+  prod_id number;
+BEGIN
+  SELECT demo_prod_seq.nextval
+    INTO prod_id
+    FROM dual;
+  :new.PRODUCT_ID := prod_id;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<table>6BD89231-F72D-EA1D-8345-CC19410DB8F5</table>
+</TriggerOraclev10g>

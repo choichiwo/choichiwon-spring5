@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="54BD77B5-22EE-0931-3A72-BD4414A6AB92" containerWithKeyObject="FBDE010E-7DAB-CA24-4FDD-56333331D716" localFKIndex="49811E88-FA78-A579-90E8-0C3A6F54868B" name="SYS_C007000">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>SYS_C007000</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F0419E53-71F4-A170-8D63-680D37665B52</importedID>
+<referredTableLongName>XE.EMP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FBDE010E-7DAB-CA24-4FDD-56333331D716</referredTableID>
+<keyObject>F8A0B705-AC43-8E1E-54C6-56EAE61BB115</keyObject>
+<referredKeyID>F8A0B705-AC43-8E1E-54C6-56EAE61BB115</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>EMPNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

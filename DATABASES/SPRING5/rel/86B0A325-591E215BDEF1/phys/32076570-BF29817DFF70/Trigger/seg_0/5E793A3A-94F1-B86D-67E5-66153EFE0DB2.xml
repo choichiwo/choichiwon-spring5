@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="UPDATE_ORDER_TOTAL" directorySegmentName="seg_0" id="5E793A3A-94F1-B86D-67E5-66153EFE0DB2">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>UPDATE_ORDER_TOTAL</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[begin
+
+-- Update the Order Total when any order item is changed
+
+update demo_orders set order_total =
+  (select sum(unit_price*quantity) from demo_order_items
+    where demo_order_items.order_id = demo_orders.order_id);
+end;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<scope>FOR EACH STATEMENT</scope>
+<table>84D21C15-287A-ECC1-D2F8-2C54D14C7027</table>
+</TriggerOraclev10g>

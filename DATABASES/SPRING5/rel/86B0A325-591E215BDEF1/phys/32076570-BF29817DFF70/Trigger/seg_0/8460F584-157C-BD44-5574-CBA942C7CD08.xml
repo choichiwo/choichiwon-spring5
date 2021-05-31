@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="BI_DEMO_USERS" directorySegmentName="seg_0" id="8460F584-157C-BD44-5574-CBA942C7CD08">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>BI_DEMO_USERS</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[begin
+begin
+  for c1 in (
+    select DEMO_USERS_SEQ.nextval next_val
+    from dual
+  ) loop
+    :new.USER_ID :=  c1.next_val;
+    :new.admin_user := 'N';
+    :new.created_on := sysdate;
+  end loop;
+end;
+end;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<table>59964246-146A-BEFB-2487-1C35EFA9481F</table>
+</TriggerOraclev10g>

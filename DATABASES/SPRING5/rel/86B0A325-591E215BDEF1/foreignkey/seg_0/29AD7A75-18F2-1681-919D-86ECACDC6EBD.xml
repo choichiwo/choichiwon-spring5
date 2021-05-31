@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="29AD7A75-18F2-1681-919D-86ECACDC6EBD" containerWithKeyObject="024B2669-AFE5-28B9-AE61-F6B8A969EB06" localFKIndex="3D1AE740-DA8C-116F-C1B0-28BAE0121001" name="APEX$_WS_FILES_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_FK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>AF4B3748-17A9-E66B-6ACF-CA45C3F39190</importedID>
+<referredTableLongName>XE.APEX$_WS_ROWS</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>195FF75E-C66F-9695-BA02-1BB13DC94ECC</referredTableID>
+<keyObject>E7A9B900-AD11-43F0-7911-41D4A00AF369</keyObject>
+<referredKeyID>E7A9B900-AD11-43F0-7911-41D4A00AF369</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

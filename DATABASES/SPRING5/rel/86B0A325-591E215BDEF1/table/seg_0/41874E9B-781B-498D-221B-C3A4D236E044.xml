@@ -1,5 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="41874E9B-781B-498D-221B-C3A4D236E044" name="TBL_BOARD">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="41874E9B-781B-498D-221B-C3A4D236E044" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="TBL_BOARD">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:43:19 UTC</createdTime>
 <commentInRDBMS><![CDATA[게시물관리테이블]]></commentInRDBMS>
@@ -10,6 +13,9 @@
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
 <Column name="BNO" id="11DD00FA-E675-D337-6149-3805FF180C15">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:45:20 UTC</createdTime>
 <commentInRDBMS><![CDATA[게시판고유번호(자동증가처리)]]></commentInRDBMS>
@@ -22,6 +28,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="TITLE" id="22D70925-A876-4403-D2FC-F3FCBE296BCD">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:46:25 UTC</createdTime>
 <commentInRDBMS><![CDATA[게시물제목]]></commentInRDBMS>
@@ -35,6 +44,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CONTENT" id="606A1EE5-0ECE-6E84-782E-10A0F9452A86">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>CONTENT</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:47:47 UTC</createdTime>
 <commentInRDBMS><![CDATA[글내용]]></commentInRDBMS>
@@ -47,6 +59,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="WRITER" id="B2F034E6-EEEF-3BD1-966D-1335315943A4">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>WRITER</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:48:30 UTC</createdTime>
 <commentInRDBMS><![CDATA[글작성자ID]]></commentInRDBMS>
@@ -60,6 +75,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="VIEW_COUNT" id="9BC0D8BF-B078-C49B-2A7F-5C395F36B75A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>VIEW_COUNT</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:48:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[글조회수카운터]]></commentInRDBMS>
@@ -73,6 +91,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="REPLY_COUNT" id="BE5D8B2F-CDB8-5096-E6F8-3E2BE376D3BF">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>REPLY_COUNT</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:02:48 UTC</createdTime>
 <commentInRDBMS><![CDATA[댓글카운트]]></commentInRDBMS>
@@ -86,6 +107,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="REG_DATE" id="8BB37263-0735-2458-CBB3-7A6D4B07610D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:03:35 UTC</createdTime>
 <commentInRDBMS><![CDATA[등록일시]]></commentInRDBMS>
@@ -98,6 +122,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="UPDATE_DATE" id="D19DC1D2-497F-2BE9-5DAE-5423BDD94C70">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>UPDATE_DATE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:04:11 UTC</createdTime>
 <commentInRDBMS><![CDATA[수정일시]]></commentInRDBMS>
@@ -109,7 +136,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TBL_BOARD_TYPE_BOARD_TYPE" id="E1F1B40F-9AF8-2256-4E6D-474B60A00A98">
+<Column name="BOARD_TYPE" id="E1F1B40F-9AF8-2256-4E6D-474B60A00A98">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD</sourceObjSchema>
+<sourceObjName>BOARD_TYPE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:14:33 UTC</createdTime>
 <ownerDesignName>SPRING5</ownerDesignName>
@@ -128,11 +158,28 @@
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7CD8FF08-D87F-73EE-24ED-C44B09ECDD41" name="TBL_BOARD_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD_PK</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 02:45:20 UTC</createdTime>
 <ownerDesignName>SPRING5</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11DD00FA-E675-D337-6149-3805FF180C15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8CE8031A-39B4-6B50-D5F5-069AA2AA6255" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="TBL_BOARD_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>0AA1D28B-5B49-C78D-32BD-3564B6536D5B</importedID>
+<indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="11DD00FA-E675-D337-6149-3805FF180C15"/>

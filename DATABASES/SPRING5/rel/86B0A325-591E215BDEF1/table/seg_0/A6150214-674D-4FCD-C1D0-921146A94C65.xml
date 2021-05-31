@@ -1,5 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6150214-674D-4FCD-C1D0-921146A94C65" name="TBL_REPLY">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6150214-674D-4FCD-C1D0-921146A94C65" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="TBL_REPLY">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:23:40 UTC</createdTime>
 <commentInRDBMS><![CDATA[댓글관리테이블]]></commentInRDBMS>
@@ -10,6 +13,9 @@
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
 <Column name="RNO" id="AE224E44-2C21-11DA-7E0B-42E64EAFE8BD">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>RNO</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:26:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[댓글고유번호(자동증가)]]></commentInRDBMS>
@@ -22,6 +28,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="REPLY_TEXT" id="E7E55A4E-551A-0A9C-C8FD-959AC3F25DC7">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REPLY_TEXT</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:36:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[댓글내용]]></commentInRDBMS>
@@ -35,6 +44,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="REPLYER" id="9E4ADD46-CAB3-84C2-C2B0-48A802322172">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REPLYER</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:37:51 UTC</createdTime>
 <commentInRDBMS><![CDATA[댓글작성자ID]]></commentInRDBMS>
@@ -48,6 +60,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="REG_DATE" id="B4E0CDF2-13AB-AEE7-A61C-A70B50864C0D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:38:25 UTC</createdTime>
 <commentInRDBMS><![CDATA[등록일]]></commentInRDBMS>
@@ -60,6 +75,9 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="UPDATE_DATE" id="6A28089C-13E9-F4A9-5DAB-492E4877DACE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>UPDATE_DATE</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:38:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[수정일]]></commentInRDBMS>
@@ -71,7 +89,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TBL_BOARD_BNO" id="9A7FE7B0-B730-77E1-839D-395A7075DA92">
+<Column name="BNO" id="9A7FE7B0-B730-77E1-839D-395A7075DA92">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:46:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[게시물관리고유값외래키]]></commentInRDBMS>
@@ -81,7 +102,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>11</dataTypePrecision>
-<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="2482249E-9A53-8B42-6E8D-EB4EB32D5412" referredColumn="11DD00FA-E675-D337-6149-3805FF180C15"/>
@@ -90,11 +111,28 @@
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="CC3E32CA-2D96-34E5-788D-C3DEF9B926D9" name="TBL_REPLY_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY_PK</sourceObjName>
 <createdBy>user</createdBy>
 <createdTime>2021-05-31 03:26:04 UTC</createdTime>
 <ownerDesignName>SPRING5</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE224E44-2C21-11DA-7E0B-42E64EAFE8BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B16AF276-3627-0851-7C70-E7FFE23762F8" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="TBL_REPLY_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY_PK</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>183E7593-4D3D-665D-F032-B7F7203D8742</importedID>
+<indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="AE224E44-2C21-11DA-7E0B-42E64EAFE8BD"/>

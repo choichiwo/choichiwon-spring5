@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="APEX$_WS_FILES_T1" directorySegmentName="seg_0" id="7CD73954-F5A5-83D3-896B-195007BF6DD3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>APEX$_WS_FILES_T1</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:19:53 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from dual;
+    end if;
+    if inserting and :new.image_alias is null then
+        :new.image_alias := :new.name;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        :new.content_last_update := sysdate;
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        if nvl(length(:new.content),0) <> nvl(length(:old.content),0) then
+            :new.content_last_update := sysdate;
+        end if;
+    end if;
+end;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>108860AC-1DD3-48B7-C4B6-5571261BCD16</owner>
+<table>024B2669-AFE5-28B9-AE61-F6B8A969EB06</table>
+</TriggerOraclev10g>

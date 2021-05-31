@@ -1,0 +1,190 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBDE010E-7DAB-CA24-4FDD-56333331D716" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="EMP">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>EMP</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>7CD3FB5F-0FB0-C1C3-7793-CF48D086DFB9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPNO" id="147AEE29-878E-80AE-C0C8-CBDACBD67D86">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>EMPNO</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>9AA074D3-E41F-06D9-58B4-92E1F66933DD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENAME" id="22E15353-CCE1-8A70-9065-054AC956139D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>ENAME</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>2BA0613B-B5CA-01F3-60CA-59D13141C5C7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JOB" id="092A001B-6F92-0924-871B-3C100EA74023">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>JOB</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>144B8E12-9E1D-9D65-E035-9FF5B415EBB1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MGR" id="25757B65-7C40-485D-FC2B-4D238D1D9DE3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>MGR</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>75A13EF9-FDFF-394B-B364-6D0DE7762FCB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54BD77B5-22EE-0931-3A72-BD4414A6AB92" referredColumn="147AEE29-878E-80AE-C0C8-CBDACBD67D86"/>
+</associations>
+</Column>
+<Column name="HIREDATE" id="2C42770F-4C39-E4FE-4A3E-413060C5D193">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>HIREDATE</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>E0F26FA2-3C58-3850-48E2-BD8981624327</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SAL" id="6F178433-4D76-A922-EE03-A74D33E9EC9F">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>SAL</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F9DDC532-F043-A66C-5BDA-C9C801B540C8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMM" id="D78069A6-CE27-A739-0887-7B429920A74B">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>COMM</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F41F1E7D-ACA1-8A01-B5DE-DA3D7BF9649C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPTNO" id="C896BE1D-D181-AE32-6DC8-2CE00987377A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMP</sourceObjSchema>
+<sourceObjName>DEPTNO</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>32FDE7C0-4988-8A53-48D9-252460D85288</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6910BF2A-C5A6-D489-7401-231AFE7F1B92" referredColumn="7E02D9D9-A6C0-C28D-E015-CF9A36711491"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F8A0B705-AC43-8E1E-54C6-56EAE61BB115" schemaObject="A6DA84F7-0121-F5D5-F444-2A441F732172" name="EMP_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>SYS_C006999</sourceObjName>
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>DE8BDAD4-EF6A-F29D-8426-FF656D271E5E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="147AEE29-878E-80AE-C0C8-CBDACBD67D86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49811E88-FA78-A579-90E8-0C3A6F54868B" name="SYS_C007000">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25757B65-7C40-485D-FC2B-4D238D1D9DE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B16FF1DC-803C-11AD-DCBC-BA4A1D9ABF29" name="SYS_C007001">
+<createdBy>user</createdBy>
+<createdTime>2021-05-31 07:20:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C896BE1D-D181-AE32-6DC8-2CE00987377A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
