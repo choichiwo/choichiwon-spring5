@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ %>
+<%@ include file="./include/header.jsp" %>
 <!-- 이후 메인 콘텐츠 영역 -->
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -157,5 +157,4 @@
   </div>
   <!-- /.content-wrapper -->
  <!-- 여기까지 메인 콘텐츠 영역 -->
- 
- 
+ <%@ include file="./include/footer.jsp" %>
