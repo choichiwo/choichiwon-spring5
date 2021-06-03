@@ -6,13 +6,21 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 알리아스Alias(별칭) dataSource로 만듭니다. 이유? 여러개의 DB와 호환되게 만들게됩니다. 
+		  오라클, Msql, Hsql 등 여러 DB서버와 호환되게 만드는데 필요 (아래) 
+	-->
+	<alias name= "dataSource-oracle_Local" alias="dataSource"/>
+	<!-- 로컬(PC) Hsql용-레로쿠클라우드에 배포용 드라이버 설정(아래) -->
+	<!-- <bean id="dataSource-hsql_Local"></bean> -->
 	<!-- 로컬(PC) 오라클 jdbc 드라이버 설정(아래) -->
 	<bean id="dataSource-oracle_local" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <property name="driverClassName" 
-              value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+              value="orcle.jdbc.driver.OracleDriver"></property>
       <property name="url" 
-              value="${접속URL변수}"></property>
-      <property name="username" value="${DbUserName}"></property>
-      <property name="password" value="${DbPassword}"></property>
+              value="jdbc:oracle:thin:@Localhost:1521/XE"></property>
+      <property name="username" value="XE"></property>
+      <property name="password" value="apmsetup"></property>
    	</bean>	
+   	<!-- 위 오라클 jdbc빈을 스프링 사용(아래) -->
+   	
 </beans>
