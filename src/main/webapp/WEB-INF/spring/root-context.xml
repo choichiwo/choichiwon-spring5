@@ -15,7 +15,7 @@
 	<!-- 로컬(PC) 오라클 jdbc 드라이버 설정(아래) -->
 	<bean id="dataSource-oracle_local" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <property name="driverClassName" 
-              value="orcle.jdbc.driver.OracleDriver"></property>
+              value="oracle.jdbc.driver.OracleDriver"></property>
       <property name="url" 
               value="jdbc:oracle:thin:@Localhost:1521/XE"></property>
       <property name="username" value="XE"></property>
