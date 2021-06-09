@@ -56,9 +56,19 @@ public class DataSourceTest {
 		//변수를 2-3이상은 바로 String변수로 처리하지않고, VO만들어 사용.
 		//PageVO.java클래스를 만들어서 페이징처리변수와 검색어변수 선언,Get/Set생성
 		//PageVO만들기전 SQL쿼리로  가상으로 페이지을 한번 구현해 보면서, 필요한 변수 만들어야 합니다.
-		//PageVO 객체를 만들어서 가상으로 초기값을 입력합니다.(아
+		//PageVO 객체를 만들어서 가상으로 초기값을 입력합니다.(아래)
 		PageVO pageVO = new PageVO();
-		pageVO.setTotalCount(100);//테스트하려고, 100명을 입력합니다.
+		
+		pageVO.setPage(1);//기본값으로 1페이지를 입력합니다.
+		pageVO.setPerPageNum(10);//UI하단사용 페이지 개수
+		pageVO.setQueryPerPageNum(10);//쿼리사용 페이지당 개수
+		pageVO.setTotalCount(memberService.countMember());//테스트하려고, 100명을 입력합니다.
+		pageVO.setSearch_keyword("admin");
+		//위 setTotalCount위치가 다른 설정보다 상단이면, 에러발생 왜냐하면, calcPage()가 실행도는데 , 실행시 위3가지변수값이 지정되 있어야지 계산메서드가 정상작동되기 때문입니다.
+		//위토탈카운트변수값은 startPage, endPage계산에 필수입니다.
+		//메퍼쿼리_DAO클래스_Service클래스_JUnit(나중엔 컨트롤러에서작업) 이제 역순으로 작업진행
+		//더 진행하기 전에 현재pageVO객체에는 어떤값이 들어 있는 확인하고 사용하겠습니다.(아래)
+		logger.info("디버그: "+pageVO.toString());
 		List<MemberVO> listMember = memberService.selectMember();
 		listMember.toString();
 	}
