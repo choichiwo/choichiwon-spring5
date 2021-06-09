@@ -9,9 +9,9 @@ package com.edu.vo;
  * 
  */
 public class PageVO {
-	private int queryStartNo;//쿼리전용 변수
-	private int queryPerPageNum;//쿼리전용
-	private Integer page;//jsp에서발생 자바전용 .int인데 Null값을허용.
+	private int queryStartNo;//쿼리전용 변수, 페이징쿼리에서 시작 페이지 인덱스번호표시 변수
+	private int queryPerPageNum;//쿼리전용, 페이징쿼리에서 1페이지당 출력할 개수표시변수
+	private Integer page;//jsp에서발생 선택한 페이지 번호변수. 자바전용 .int인데 Null값을허용.
 	private int perPageNum;//UI 하단에 보여줄 페이징 개수 계산에 필요
 	private int totalCount;//계산식의 기초값으로 이 전체개수가 구해진 이후 페이징등의 계산식이 진행됩니다.
 	private int startPage;//위 perPageNum으로 구하는 UI하단페이지시작번호
@@ -24,7 +24,7 @@ public class PageVO {
 	public int getQueryStartNo() {
 		//this.page-1하는 이유는 jsp에서는 1,2,3...받지만,
 		//쿼리에서는0,1,2...으로 사용되기 떄문에. page*페이지당보여줄개수
-		queryStartNo = queryPerPageNum*(this.page-1);
+		queryStartNo = queryPerPageNum*(this.page-1);//쿼리에서 시작페이지의 인덱스 번호로 사용
 		return queryStartNo;
 	}
 	public void setQueryStartNo(int queryStartNo) {
