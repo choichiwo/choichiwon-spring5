@@ -38,11 +38,13 @@ public class AdminController {
 		if(pageVO.getPage() == null) {//jsp에서 전송값이 없을때만 초기값 입력
 			pageVO.setPage(1);
 		}
-		//pageVO의 calcPage메서드를 실행하려면, 필수 변수값입력(아래)
+		//pageVO의 calcPage메서드를 실행하려면, 필수 변수값입력(아래)		
 		pageVO.setQueryPerPageNum(10);
-		logger.info("디버그" + pageVO.toString());//지금까지 jsp->컨트롤러 일방향 자료 이동.
+		pageVO.setPerPageNum(10);//하단UI에 보여줄 페이지번호 개수
+		pageVO.setTotalCount(memberService.countMember(pageVO));//검색되든 않되든 결과의 전체카운트값(단, 페이징 관련없개수)
 		List<MemberVO> listMember = memberService.selectMember(pageVO);
-		pageVO.setTotalCount(listMember.size());//검색되든 않되든 결과의 전체카운트값
+		
+		logger.info("디버그" + pageVO.toString());//지금까지 jsp->컨트롤러 일방향 자료 이동.
 		return "admin/member/member_list";//jsp파일 상대경로
 	}
 	//URL요청 경로는 @RequestMapping 반드시 절대경로로 표시
