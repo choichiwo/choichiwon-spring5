@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class AdminController {
+	//이 메서드는 회원목록을 출력하는 jsp와 매핑이 됩니다..
+	@RequestMapping(value="/admin/board/board_list", method=RequestMethod.GET)
+	public String selectMember() throws Exception {
+		
+		return "admin/board/board_list";//jsp파일 상대경로
+	}
 	//URL요청 경로는 @RequestMapping 반드시 절대경로로 표시
 	@RequestMapping(value="/admin", method=RequestMethod.GET)
 	public String admin(Model model) throws Exception {//에러발생시 Exception클래스의 정보를 스프링으로 보내게 됩니다.
