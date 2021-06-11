@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.spi.LoggerFactoryBinder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -31,7 +32,7 @@ public class AdminController {
 	@Inject
 	private IF_MemberService memberService;
 	@RequestMapping(value="/admin/member/member_list", method=RequestMethod.GET)
-	public String selectMember(PageVO pageVO,Model model) throws Exception {
+	public String selectMember(@ModelAttribute("PageVO")PageVO pageVO,Model model) throws Exception {
 		/*
 		이 메서드는 2개 객체 생성하는 로직이 필요. 결과를 JSP로 보내는 기능을 수행
 		1객체: memberList를 생성해서 model을 통해서 jsp로 전송 
