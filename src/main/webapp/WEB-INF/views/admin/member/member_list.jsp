@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <%@ include file="../include/header.jsp" %>
 
 <!-- Content Wrapper. Contains page content -->
@@ -56,23 +58,25 @@
               <!-- 줄바꿈않할때 다음 클래스추가 text-nowrap  -->
               <thead>
                 <tr>
-                  <th class="text-center">BNO</th>
-                  <th class="text-center">BOARD_TYPE</th>
-                  <th class="text-center col-6">TITLE</th>
-                  <th class="text-center">WRITER</th>
-                  <th class="text-center">REG_DATE</th>
+                  <th class="text-center">사용자ID</th>
+                  <th class="text-center">사용자이름</th>
+                  <th class="text-center">이메일</th>
+                  <th class="text-center">레벨</th>
+                  <th class="text-center">가입일자</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- 아래 링크주소에 jsp에서 프로그램처리예정 -->
+                <!-- jstl반복문으로 listMember객체 바인딩 -->
+                <c:forEach var="memberVO" items="${listMember}">
                 <tr style="cursor: pointer;" onclick="location.replace('board_view.html?bno-183');">
-                  <td>183</td>
-                  <td>NOTICE</td>
-                  <td>chicken flank fatback doner.</td>
-                  <td><span class="tag tag-success">Approved</span></td>
-                  <td>11-7-2014</td>
-       
+                  <td>${memberVO.user_id}</td>
+                  <td>${memberVO.user_name}</td>
+                  <td>${memberVO.email}</td>
+                  <td>${memberVO.levels}</span></td>
+                  <td><fmt:formatDate value="${memberVO.reg_date}"/></td>
                 </tr>
+                </c:forEach>
+                
               </tbody>
             </table>
           </div>
