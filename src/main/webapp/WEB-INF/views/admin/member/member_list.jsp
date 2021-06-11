@@ -66,14 +66,20 @@
                 </tr>
               </thead>
               <tbody>
+              <!-- listMember객체 검색 빈 값일때 -->
+              <c:if test="${empty listMember}">
+              <tr>		
+              		<td colspan="5" class="text-center">조회된 값이 없습니다.</td>
+              </tr>		
+              	</c:if>	
                 <!-- jstl반복문으로 listMember객체 바인딩 -->
                 <c:forEach var="memberVO" items="${listMember}">
-                <tr style="cursor: pointer;" onclick="location.replace('board_view.html?bno-183');">
+                <tr style="cursor: pointer;" onclick="location.replace('/admin/member/member_view?user_id=${memberCO.user_id}');">
                   <td>${memberVO.user_id}</td>
                   <td>${memberVO.user_name}</td>
                   <td>${memberVO.email}</td>
                   <td>${memberVO.levels}</span></td>
-                  <td><fmt:formatDate value="${memberVO.reg_date}"/></td>
+                  <td><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss.SSSS" value="${memberVO.reg_date}"/></td>
                 </tr>
                 </c:forEach>
                 
@@ -85,29 +91,25 @@
         <!-- //콘텐츠 내용 -->
         <!-- 페이징 처리 -->
         <div class="col-12 text-right">
-          <a href="board_write.html" class="btn btn-primary mb-3">글쓰기</a>
+          <a href="/admin/member/member_insert" class="btn btn-primary mb-3">회원등록</a>
+          
           <ul class="pagination justify-content-center">
               <li class="paginate_button page-item previous disabled" id="example2_previous">
                 <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
               </li>
-              <li class="paginate_button page-item active">
-                <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-              </li>
-              <li class="paginate_button page-item ">
-                <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a>
-              </li>
-              <li class="paginate_button page-item ">
-                <a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a>
-              </li>
-              <li class="paginate_button page-item ">
-                <a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a>
-              </li>
-              <li class="paginate_button page-item ">
-                <a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a>
-              </li>
-              <li class="paginate_button page-item ">
-                <a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a>
-              </li>
+              
+              <c:forEach var="idx" begin="${pageVO.startPage}" end="${pageVO.endPage}" step="1">
+              	  <!--
+              	  	jstl c:out value값에 java삼항연산자 비교값을 구현
+					c:out 을 써서 출력 == ExressionLanguage(표현언어) ${}
+					차이점은 c:out 해킹방지 코드가 들었다.              	  
+              	  -->
+              	  <c:out value="${(idx==pagVO.page)?'active':''}"></c:out>
+	              <li class="paginate_button page-item active">
+	                <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+	              </li>
+              </c:forEach>
+              
               <li class="paginate_button page-item next" id="example2_next">
                 <a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
               </li>
