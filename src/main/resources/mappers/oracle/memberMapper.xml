@@ -11,7 +11,7 @@ if조건문에서 test조건부분에 문자열비교시 '문자열'.toString()�
 다음처럼 비교해도 가능합니다. test="''.equals(search_type)", 지금사용X 스프링클래스에서 사용O
 참고로 equals메서드를 사용하면 null비교까지 포함 됩니다.
 -->
-<sql id="sqlwhere">
+<sql id="sqlWhere">
 	<if test="search_type != '' and search_type != null">
         WHERE 
     		<if test="search_type == 'all'.toString()">    
@@ -80,7 +80,7 @@ systimestamp
 그래서 검색이 포함된 카운트개수가 나와야함. -->
 <select id="countMember" resultType="int">
 select count(*) from tbl_member
-<include refid="sqlwhere" />
+<include refid="sqlWhere" />
 </select>
 <!-- pageVO 받아서 처리하는 조회 쿼리 -->
 <select id="selectMember" resultType="com.edu.vo.MemberVO">
@@ -89,7 +89,7 @@ SELECT TableB.* FROM
     SELECT ROWNUM AS RNUM, TableA.* FROM
     (
         SELECT * FROM tbl_member
-        <include refid="sqlwhere" />
+        <include refid="sqlWhere" />
         ORDER BY reg_date DESC        
     ) TableA
 <![CDATA[     
