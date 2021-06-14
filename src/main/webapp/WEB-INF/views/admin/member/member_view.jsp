@@ -106,9 +106,9 @@
 <script>
 $(document).ready(function(){
 	$("#btn_list").click(function(){
-		alert('준비중입니다');
-		//var queryString = 'page='+${pageVO.page}+'&search_type='+${pageVO.search_type}+'&search_keyword='+${pageVO.search_keyword}+'';
-		//location.replace('/admin/member/member_list?'+queryString);
+		var queryString = 'page=${pageVO.page}&search_type=${pageVO.search_type}&search_keyword=${pageVO.search_keyword}';
+		//alert(queryString);//디버그
+		location.replace('/admin/member/member_list?'+queryString);
 	});
 });
 </script>
