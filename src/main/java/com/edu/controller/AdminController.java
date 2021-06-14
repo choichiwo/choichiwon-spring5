@@ -33,6 +33,12 @@ public class AdminController {
 	@Inject
 	private IF_MemberService memberService;
 	
+	@RequestMapping(value="/admin/member/member_delete", method=RequestMethod.POST)
+	public String deleteMember (MemberVO memberVO) throws Exception {
+		//이 메서드는 회원상세보기페이지에서 삭제버튼을 클릭시 전송받은 memberVO값을 이용해서 삭제를 구현(아래)
+		memberService.deleteMember(memberVO.getUser_id());
+		return null;
+	}
 	@RequestMapping(value="/admin/member/member_view", method=RequestMethod.GET)
 	public String viewMemberForm(Model model, @RequestParam("user_id")String user_id, @ModelAttribute("pageVO")PageVO pageVO) throws Exception {
 		/*
@@ -43,10 +49,12 @@ public class AdminController {
 		memberService.readMember(user_id);
 		//위 출력값 memberVO 1개의 레코드를 model를 이용해서 member_view.jsp 보냅니다.(아래)
 		model.addAttribute("memberVO", memberService.readMember(user_id));
+		//model.addAttribute("pageVO", pageVO);
+		//아래 페이지 반환시(렌더링) @ModelAttribute("pageVO")에 의해서 pageVO.page변수값으로 jsp보냅니다.
 		return "admin/member/member_view";//상대경로 폴더파일위치
 	}
 	@RequestMapping(value="/admin/member/member_list", method=RequestMethod.GET)
-	public String selectMember(@ModelAttribute("PageVO")PageVO pageVO,Model model) throws Exception {
+	public String selectMember(@ModelAttribute("pageVO")PageVO pageVO,Model model) throws Exception {
 		/*
 		이 메서드는 2개 객체 생성하는 로직이 필요. 결과를 JSP로 보내는 기능을 수행
 		1객체: memberList를 생성해서 model을 통해서 jsp로 전송 
