@@ -41,8 +41,11 @@ public class AdminController {
 	}
 	//아래경로는 수정폼을 호출=화면에 출력만=렌더링만
 	@RequestMapping(value="/admin/member/member_update_form", method=RequestMethod.POST)
-	public String updateMemberForm() throws Exception {
-		
+	public String updateMemberForm(MemberVO memberVO, Model model,@ModelAttribute("pageVO")PageVO pageVO) throws Exception {
+		//사용자1명의 레코드를 가져오는 맴버서비스(쿼리)를 실행(아래)
+		MemberVO memberView = memberService.readMember(memberVO.getUser_id());
+		//사용자1명의 레코드를 model에 담아서@ModelAttribute에담아서 jsp로 보냅니다.
+		model.addAttribute("memberVO", memberView);
 		return "admin/member/member_update";//상대경로
 	}
 	@RequestMapping(value="/admin/member/member_delete", method=RequestMethod.POST)
