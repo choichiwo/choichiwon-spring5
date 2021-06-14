@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ include file="../include/header.jsp" %>
 
 <!-- Content Wrapper. Contains page content -->
@@ -34,8 +34,8 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <!-- 첨부파일을 전송할때 enctype-필수 없으면, 첨부파일이 정송X -->
-          <form id="form_view" name="form_view" action="/admin/member/member_update_form" method="post" enctype="multipart/form-data">
+          <!-- 첨부파일을 전송할때 enctype=필수 없으면, 첨부파일이 전송X -->
+          <form id="form_view" name="form_view" action="/admin/member/member_update_form" method="get" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
                 <label for="exampleInputEmail1">사용자ID</label>
@@ -45,43 +45,38 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">사용자명</label>
                 <br>
-                <c:out value="${memberVO.user_name}" /> 
+                <c:out value="${memberVO.user_name}" />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">이메일</label>
                 <br>
-                <c:out value="${memberVO.email}" /> 
+                <c:out value="${memberVO.email}" />
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">승인여부</label>
+                <label for="exampleInputPassword1">가입대기</label>
                 <br>
-                <c:out value="${memberVO.enabled}" /> 
+                <c:out value="${memberVO.enabled}" />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">권한</label>
                 <br>
-                <c:out value="${memberVO.levels}" /> 
+                <c:out value="${memberVO.levels}" />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">가입일</label>
                 <br>
-                <c:out value="${memberVO.reg_date}" /> 
+                <c:out value="${memberVO.reg_date}" />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">수정일</label>
                 <br>
-                <c:out value="${memberVO.update_date}" /> 
-              </div>
-              
-                    
-                  </div>  
-                </div>
+                <c:out value="${memberVO.update_date}" />
               </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-              <button type="submit" class="btn btn-primary">수정</button>
+              <button type="submit" class="btn btn-primary">수정폼</button>
               <button type="button" class="btn btn-danger" id="btn_delete">삭제</button>
               <button type="button" class="btn btn-default" id="btn_list">목록</button>
               <!-- 목록으로 이동하려면, pageVO도 가져야 합니다. 또한 삭제/수정 보안때문에 
@@ -93,13 +88,12 @@
             </div>
           </form>
         </div>
-   
         <!-- //콘텐츠 내용 -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
+<!-- /.content-wrapper -->
 
 <%@ include file="../include/footer.jsp" %>
 <!-- 관리자단은 jQuery코어가 하단 footer에 있기 때문에 여기에 위치합니다. -->
@@ -107,8 +101,9 @@
 $(document).ready(function(){
 	$("#btn_delete").click(function(){
 		if(confirm("정말로 삭제하시겠습니까?")) {
-			//위 컨펌대화상제에서 예,를 누르면, 아래 부분이 실행됨.(아니오, 건너뜀)
+			//위 컨펌대화상자에서 예,를 누르면, 아래 부분이 실행됨.(아니오, 건너띔)
 			$("#form_view").attr("action","/admin/member/member_delete");
+			$("#form_view").attr("method","post");
 			$("#form_view").submit();
 		}
 	});
