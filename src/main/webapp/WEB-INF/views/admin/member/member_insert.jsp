@@ -41,6 +41,7 @@
               <div class="form-group">
               	<!-- 신규등록시 ID중복체크필수:버튼이벤트 -->
                 <label for="user_id">사용자ID</label>
+                <button id="btn_idCheck" type="button" class="btn btn-sm btn-">중복체크</button>
                 <input name="user_id" type="text" class="form-control" id="user_id" placeholder="회원ID를 입력해 주세요" required>
               </div>
               <div class="form-group">
@@ -77,8 +78,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-              <button type="submit" class="btn btn-primary">수정</button>
-              <button type="button" class="btn btn-info" id="btn_prev">이전</button>
+              <button type="submit" class="btn btn-primary ">등록</button>
               <button type="button" class="btn btn-default" id="btn_list">목록</button>
             </div>
             <input name="page" type="hidden" value="${pageVO.page}">
@@ -97,16 +97,12 @@
 <!-- 관리자단은 jQuery코어가 하단 footer에 있기 때문에 여기에 위치합니다. -->
 <script>
 $(document).ready(function(){
-	var form_update = $("form[name='form_write']");
-	$("#btn_prev").click(function(){
-		form_update.attr("action","/admin/member/member_view");
-		form_update.attr("method","get");
-		form_update.submit();
-	});
+	var form_write = $("form[name='form_write']");
+	
 	$("#btn_list").click(function(){
-		form_update.attr("action","/admin/member/member_list");
-		form_update.attr("method","get");
-		form_update.submit();
+		form_write.attr("action","/admin/member/member_list");
+		form_write.attr("method","get");
+		form_write.submit();
 	});
 });
 </script>
