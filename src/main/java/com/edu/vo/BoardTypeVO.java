@@ -6,5 +6,28 @@ package com.edu.vo;
  *
  */
 public class BoardTypeVO {
-
+	//맴버변수 생성
+	private String board_type;//PK고유값, 식별자
+	private String board_name;
+	private Integer board_sun;//int>Integer null을 허용 nullPoint예외처리 방지기능
+	//입출력가능한 메서드를 만듭니다.
+	public String getBoard_type() {
+		return board_type;
+	}
+	public void setBoard_type(String board_type) {
+		this.board_type = board_type;
+	}
+	public String getBoard_name() {
+		return board_name;
+	}
+	public void setBoard_name(String board_name) {
+		this.board_name = board_name;
+	}
+	public Integer getBoard_sun() {
+		return board_sun;
+	}
+	public void setBoard_sun(Integer board_sun) {
+		this.board_sun = board_sun;
+	}
+	
 }
