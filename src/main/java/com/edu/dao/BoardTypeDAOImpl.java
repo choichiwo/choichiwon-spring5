@@ -11,7 +11,7 @@ import com.edu.vo.BoardTypeVO;
 
 /**
  * 이 클래스는 게시판생성관리 쿼리의 인터페이스를 구현메서드가 있는 클래스 입니다.
- * @author user
+ * @author 최치원
  *
  */
 @Repository
@@ -24,7 +24,7 @@ public class BoardTypeDAOImpl implements IF_BoardTypeDAO {
 	public void deleteBoardType(String board_type) throws Exception {
 		// TODO sqlSession탬플릿(틀)을 이용해서 매퍼쿼를 실행
 		sqlSession.delete("boardTypeMapper.delteBoardType", board_type);
-		//
+		// 서식 sqlSession.~템플릿메서드("SQL쿼리위치", 테이터객체변수);
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class BoardTypeDAOImpl implements IF_BoardTypeDAO {
 	@Override
 	public BoardTypeVO readBOardType(String board_type) throws Exception {
 		// TODO 아래 주석 동일
-		return sqlSession.selectOne("boarTypeMapper.readBoardType", board_type);
+		return sqlSession.selectOne("boardTypeMapper.readBoardType", board_type);
 	}
 
 	@Override
