@@ -41,7 +41,7 @@
                   
                   <th class="text-center">BOARD_TYPE</th>
                   <th class="text-center">게시판 이름</th>
-                  <th class="text-center">출력순처</th>
+                  <th class="text-center">출력순서</th>
                 </tr>
               </thead>
               <tbody>
