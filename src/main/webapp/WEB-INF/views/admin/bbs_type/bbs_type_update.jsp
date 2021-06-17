@@ -34,10 +34,10 @@
           <!-- /.card-header -->
           <!-- form start -->
           <!-- 첨부파일을 전송할때 enctype-필수 없으면, 첨부파일이 정송X -->
-          <form name="form_write" action="/admin/bbs_type/bbs_type_update" enctype="multipart/form-data">
+          <form name="form_write" method="post" action="/admin/bbs_type/bbs_type_update" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
-                <!-- PK고튜키, 식별자는 수정할수 있으면, 여기 묶여있는 하위 게시물들은 소속잃어 버립니다. 그래서, 수정불가X -->
+                <!-- PK고유키, 식별자는 수정할수 있으면, 여기 묶여있는 하위 게시물들은 소속잃어 버립니다. 그래서, 수정불가X -->
                 <label for="board_type">게시판타입</label>
                 <input readonly value="${boardTypeVO.board_type}" name="board_type" type="text" class="form-control" id="board_type" placeholder="게시판타입을 입력해주세요" required>
               </div>
@@ -47,7 +47,7 @@
               </div>
               <div class="form-group">
                 <label for="board_sun">출력순수</label>
-                <input value="${boardTypeVO.board_sun}" name="board_name" type="text" class="form-control" id="board_name" placeholder="출력순서를 입력해주세요" required>
+                <input value="${boardTypeVO.board_sun}" name="board_sun" type="text" class="form-control" id="board_name" placeholder="출력순서를 입력해주세요" required>
               </div>
              
                
