@@ -25,12 +25,16 @@ insert into tbl_attach
 )
 values
 (
-	#{save_file_name},#{real_file_name},sysdate,
-	select bno from (
-		select bno from tbl_board order by bno desc
-	) where rownum = 1
+	#{save_file_name},#{real_file_name},sysdate,#{bno}
+	
 )
 </insert>
+<!-- 
+bno 변수값으로 받는 로직을 추가했기떄문에 아래 주석
+select bno from (
+		select bno from tbl_board order by bno desc
+	) where rownum = 1
+ -->
 <!-- 위bno는 게시물 등록시 첨부파일 쿼리는  bno 매래변수로 보낼 수가 없는 상태 임. -->
 <!-- 게시물CRUD 쿼리생성 -->
 <delete id="deleteBoard">
@@ -55,17 +59,18 @@ where bno = #{bno}
 select * from tbl_board where bno = #{bno}
 </select>
 <!-- bno필드변수가 자동증가가 되는 기능이 필요 seq.nextVal -->
-<insert id="insertBoard">
-<selectKey keyProperty="seq_bno" resultType="int" order="BEFORE">
-	select seq_bno.nextval from dual
-</selectKey>
-	insert into tbl_board
-	( 
-	bno, title, content, writer, reg_date, board_type
-	)
-	values (
-	#{seq_bno},#{title},#{content},#{writer},systimestamp,#{board_type}
-	)
+<insert id="insertBoard" parameterType="com.edu.vo.BoardVO">
+	<selectKey keyProperty="bno" resultType="int" order="BEFORE">
+		select seq_bno.nextval from dual
+	</selectKey>
+		insert into tbl_board
+		( 
+		bno, title, content, writer, reg_date, board_type
+		)
+		values 
+		(
+		#{bno},#{title},#{content},#{writer},systimestamp,#{board_type}
+		)
 </insert>
 <!-- 페이징을 제외한 검색쿼리(board_type포함)를 이용해서 개수물totalCount변수값 구하기 -->
 <select id="countBoard" resultType="int">

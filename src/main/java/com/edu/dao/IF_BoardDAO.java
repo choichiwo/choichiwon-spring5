@@ -9,7 +9,7 @@ import com.edu.vo.PageVO;
 /**
  * 이 인터페이스는 boardMapper.xml을 접근하기 위한 DataAccessObject 입니다.
  * DAO 와 서비스를 나눈 이유 확인.
- * @author user
+ * @author 최치원
  *
  */
 public interface IF_BoardDAO {
@@ -27,6 +27,6 @@ public interface IF_BoardDAO {
 	public void deleteBoard(int bno) throws Exception;
 	public void updateBoard(BoardVO boardVO) throws Exception;
 	public BoardVO readBoaard(int bno) throws Exception;
-	public void insertBoard(BoardVO boardVO) throws Exception;
+	public int insertBoard(BoardVO boardVO) throws Exception;
 	public List<BoardVO> selectBoard(PageVO pageVO) throws Exception;
 }
