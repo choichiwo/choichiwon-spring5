@@ -1,15 +1,15 @@
 --SQL쿼리 페이징을 구현해서 변수로 삼을것을 정의
---PageVO의 멤버변수로 사용예정
+--PageVO의 멤버변수로 사용예정 -> 게시물 일떄...
 SELECT TableB.* FROM
 (
     SELECT ROWNUM AS RNUM, TableA.* FROM
     (
         SELECT * FROM tbl_member
-        WHERE user_id LIKE '%admin%'
-        OR user_name LIKE '%사용자8%'
+        WHERE title LIKE '%%'
+        OR content LIKE '%%'
         ORDER BY reg_date DESC
-    ) TableA WHERE ROWNUM <= (0*5)+ 5
-) TableB WHERE TableB.RNUM > 0*5
+    ) TableA WHERE ROWNUM <= (2*5)+ 5
+) TableB WHERE TableB.RNUM > 2*5
 --페이징쿼리에서 필요한 변수는 2개
 --현재페이지수의 변수 page*b == queryStartNo
 --1페이당보여줄 개수의변수 b == queryPerPageNum
