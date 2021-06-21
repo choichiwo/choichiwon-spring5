@@ -39,6 +39,21 @@ public class AdminController {
 	@Inject
 	private IF_BoardTypeService boardTypeService;
 	
+	//게시물 목록은 폼으로 접근하지 않고 URL로 접근하기 때문에
+	@RequestMapping(value="/admin/board/board_list", method=RequestMethod.GET)
+	public String board_list(@ModelAttribute("pageVO")PageVO pageVO, Model model) throws Exception {
+		//페이징처리를 위한 기본값 추가
+		if(pageVO.getPage() == null) {
+			pageVO.setPage(1);
+		}
+		pageVO.setPerPageNum(5);//UI하단에서 보여줄 페이징 번호 크기
+		//토탈 카운트를 구하기전 2개의 값이 필수로 필요(아래)
+		pageVO.setQueryPerPageNum(5);
+		pageVO.setTotalCount(boardService.countBoard(pageVO));
+		
+		model.addAttribute("listBoardVO", null);
+		return "admin/board/board_list";//.jsp생략
+	}
 	//jsp에서 게시판생성관리에 Get/Post 접근할때 URL을 bbs_type로 지정합니다.
 	//왜 board_type하지않고, bbs_type하는 이유는 왼쪽메뉴 고정시키는 로직에서 경로 board와 겹치지 않도록
 	@RequestMapping(value="/admin/bbs_type/bbs_type_list", method=RequestMethod.GET)
