@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -27,6 +29,7 @@ import com.edu.vo.PageVO;
 @Aspect
 @ControllerAdvice
 public class AspectAdvice {
+	private Logger logger = LoggerFactory.getLogger(AspectAdvice.class);
 	@Inject
 	private IF_BoardTypeService boardTypeService;
 	
@@ -62,6 +65,7 @@ public class AspectAdvice {
 				board_type = (String) session.getAttribute("session_board_type");
 				pageVO.setBoard_type(board_type);//목표달성:여기서 항상 값을 가져가도록 구현됩니다.
 			}
+			logger.info("디버그19: "+(String) session.getAttribute("session_board_type"));
 		}
 		//Aspect > 포인트컷(Around) > 조인포인트(매서드) > 매개변수로 구현한 결과를 리턴
 		Object result = pjp.proceed(); 

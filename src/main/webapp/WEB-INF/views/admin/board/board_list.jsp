@@ -75,9 +75,10 @@
 	                  <td><fmt:formatDate pattern="yyyy-MM-dd hh:MM:ss.SSSS" value="${boardVO.reg_date}"/> </td>
 	                </tr>
                 </c:forEach>
-                
+              
               </tbody>
             </table>
+	발생한 세션값 확인<c:out value="${session_board_type}" />  
           </div>
           <!-- /.card-body -->
         </div>
