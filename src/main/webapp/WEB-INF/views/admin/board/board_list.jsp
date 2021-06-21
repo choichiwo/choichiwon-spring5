@@ -9,12 +9,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">{게시판변수명} 리스트</h1>
+            <h1 class="m-0">${pageVO.board_type} 리스트</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">{게시판변수명}</li>
+              <li class="breadcrumb-item active">${pageVO.board_type} 게시물관리</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -33,13 +33,13 @@
             <div class="card-tools">
               <!-- 내용검색 폼 -->
               <div class="input-group input-group-md">
-                <form name="form_search" action="board_list.html" method="GET" class="form-horizontal">
+                <form name="form_search" action="/admin/board/board_list" method="GET" class="form-horizontal">
                   <select name="search_type" class="form-control float-left" style="width: inherit;">
-                    <option>전체</option>
-                    <option>제목</option>
-                    <option>내용</option>
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="content">내용</option>
                   </select>  
-                  <input type="text" name="table_search" class="form-control float-left" placeholder="Search" style="width: inherit;">
+                  <input type="text" name="search_keyword" class="form-control float-left" placeholder="Search" style="width: inherit;">
                   <div class="input-group-append float-left" style="width: inherit;">
                     <button type="submit" class="btn btn-default">
                       <i class="fas fa-search"></i>
@@ -65,14 +65,16 @@
               </thead>
               <tbody>
                 <!-- 아래 링크주소에 jsp에서 프로그램처리예정 -->
-                <tr style="cursor: pointer;" onclick="location.replace('board_view.html?bno-183');">
-                  <td>183</td>
-                  <td>NOTICE</td>
-                  <td>chicken flank fatback doner.</td>
-                  <td><span class="tag tag-success">Approved</span></td>
-                  <td>11-7-2014</td>
-       
-                </tr>
+                <c:forEach var="s" items="listBoardVO">
+	                <tr style="cursor: pointer;" onclick="location.replace('board_view.html?bno-183');">
+	                  <td>183</td>
+	                  <td>NOTICE</td>
+	                  <td>chicken flank fatback doner.</td>
+	                  <td><span class="tag tag-success">Approved</span></td>
+	                  <td>11-7-2014</td>
+	                </tr>
+                </c:forEach>
+                
               </tbody>
             </table>
           </div>
