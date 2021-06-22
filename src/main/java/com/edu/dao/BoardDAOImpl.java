@@ -57,7 +57,7 @@ public class BoardDAOImpl implements IF_BoardDAO {
 	@Override
 	public void updateViewCount(Integer bno) throws Exception {
 		// TODO 아래 주석 동일
-		sqlSession.update("boardMapper.updaateViewCount", bno);
+		sqlSession.update("boardMapper.updateViewCount", bno);
 	}
 
 	@Override
