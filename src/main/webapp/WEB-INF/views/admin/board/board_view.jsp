@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ include file="../include/header.jsp" %>
+
  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -58,18 +61,26 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">작성일</label>
                 <br>
-                ${boardVO.reg_date}
+                <fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss" value="${boardVO.reg_date}"/> 
               </div>
               <div class="form-group">
                 <label for="exampleInputFile">첨부파일</label>
                 <c:forEach begin="0" end="1" var="idx">
-                
-                <div class="input-group">
-                  <div class="custom-file">
-                    {첨부파일다운로드}
-                  </div>  
-                </div>
-                
+	                <c:if test="${boardVO.save_file_names[idx] == null}">
+		                <div class="input-group">
+		                  <div class="custom-file">
+		                  <!-- 첨부파일을 URL로 직접접근하지 못하기 떄문에 다운로드전용 메서드생성 -->
+		                    <a href="/download?save_file_name=${boardVO.save_file_names[idx]}&real_file_name=${boardVO.real_file_names[idx]}"> 
+		                    ${boardVO.real_file_names[idx]}
+		                    </a>
+		                    <!-- jstl에서 변수사용하기 fn.split('데이터', '분할구분값') 목적: 확장자를 이용해서 이미지 미리보기를 할 건지 결정 img태그사용
+		                    	String[] fileNameArray = String.split('변수값','분할기준값');
+		                    -->
+		                    <c:set var="fileNameArray" value="${fn:split(boardVO.save_file_names[idx],'.')}" />
+		                  	<c:set var="ectName" value="${fileNameArray[fn:length()}" />
+		                  </div>  
+		                </div>
+	                </c:if>
                 </c:forEach>
               </div>
             </div>
