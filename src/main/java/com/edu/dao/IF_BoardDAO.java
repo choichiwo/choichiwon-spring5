@@ -26,7 +26,7 @@ public interface IF_BoardDAO {
 	//기본 CRUD 아래
 	public void deleteBoard(int bno) throws Exception;
 	public void updateBoard(BoardVO boardVO) throws Exception;
-	public BoardVO readBoaard(int bno) throws Exception;
+	public BoardVO readBoard(int bno) throws Exception;
 	public int insertBoard(BoardVO boardVO) throws Exception;
 	public List<BoardVO> selectBoard(PageVO pageVO) throws Exception;
 }

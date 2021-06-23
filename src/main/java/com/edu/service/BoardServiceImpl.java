@@ -71,9 +71,9 @@ public class BoardServiceImpl implements IF_BoardService {
 
 	@Transactional //All or NotAll	
 	@Override
-	public BoardVO readBoaard(int bno) throws Exception {
+	public BoardVO readBoard(int bno) throws Exception {
 		// TODO 게시물 상세보기시 실행순서 readBoard -> updateViewCount 2개의 메서드가 필요
-		BoardVO boardVO = boardDAO.readBoaard(bno);
+		BoardVO boardVO = boardDAO.readBoard(bno);
 		boardDAO.updateViewCount(bno);
 		return boardVO;
 	}

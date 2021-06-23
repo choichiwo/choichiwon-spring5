@@ -21,7 +21,7 @@ public interface IF_BoardService {
 	//기본 CRUD 아래
 	public void deleteBoard(int bno) throws Exception;
 	public void updateBoard(BoardVO boardVO) throws Exception;
-	public BoardVO readBoaard(int bno) throws Exception;
+	public BoardVO readBoard(int bno) throws Exception;
 	public void insertBoard(BoardVO boardVO) throws Exception;
 	public List<BoardVO> selectBoard(PageVO pageVO) throws Exception;
 }

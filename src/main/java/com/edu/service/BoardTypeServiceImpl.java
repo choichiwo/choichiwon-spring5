@@ -32,7 +32,7 @@ public class BoardTypeServiceImpl implements IF_BoardTypeService {
 	}
 
 	@Override
-	public BoardTypeVO readBOardType(String board_type) throws Exception {
+	public BoardTypeVO readBoardType(String board_type) throws Exception {
 		// TODO 실행결과반환 readBoardType(아래실행에필요한변수=매개변수,파라미터,인자,아규먼트)
 		return boardTypeDAO.readBOardType(board_type);
 	}

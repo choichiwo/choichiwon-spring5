@@ -79,7 +79,7 @@ public class BoardDAOImpl implements IF_BoardDAO {
 	}
 
 	@Override
-	public BoardVO readBoaard(int bno) throws Exception {
+	public BoardVO readBoard(int bno) throws Exception {
 		// TODO 아래 주석 동일
 		return sqlSession.selectOne("boardMapper.readBoard", bno);
 	}
