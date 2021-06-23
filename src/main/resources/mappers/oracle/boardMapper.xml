@@ -11,7 +11,7 @@ delete from tbl_attach where save_file_name = #{save_file_name}
 </delete>
 <!-- 왜 수정이 없는가-> 저장된파일을 수정못하고, 기존삭제하고, 신규파일을 덮어씁니다.단,bno를 매개변수 받습니다. -->
 <insert id="updateAttach">
-insert into tbl_attavh (save_file_name,real_file_name,reg_date,bno)
+insert into tbl_attach (save_file_name,real_file_name,reg_date,bno)
 values (#{save_file_name},#{real_file_name},sysdate,#{bno})
 </insert>
 <select id="readAttach" resultType="com.edu.vo.AttachVO">

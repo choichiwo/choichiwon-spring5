@@ -49,7 +49,7 @@ public class BoardServiceImpl implements IF_BoardService {
 	@Override
 	public void updateBoard(BoardVO boardVO) throws Exception {
 		// TODO 첨부파일 있으면 updateAtaach -> 게시물 업데이트 updateBoard
-		boardDAO.updateAttach(null);
+		boardDAO.updateBoard(boardVO);
 		//첨부파일DB처리(아래)
 		int bno = boardVO.getBno();
 		String[] save_file_names = boardVO.getSave_file_names();
