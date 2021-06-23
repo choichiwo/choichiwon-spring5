@@ -69,7 +69,7 @@ public class AspectAdvice {
 				//세션값이 있다면, 실행
 				search_keyword = (String) session.getAttribute("session_search_keyword");
 				if(pageVO != null) {//겟,셋중에 Set할때 pageVO널이면 에러발생하기 떄문에 추가한 코드
-					pageVO.setSearch_keyword(search_keyword);
+					pageVO.setSearch_keyword(search_keyword);					
 				}
 			}
 			if(board_type != null) {//최초로 세션변수가 발생
