@@ -52,6 +52,10 @@ public class CommonUtil {
 		return uploadPath;
 	}
 	
+	//첨부파일 개별삭제 Ajax로 받아서 처리, @ResponseBodt사용
+	@RequestMapping(value="/file_delete", method=RequestMethod.POST)
+	@ResponseBody
+	public 
 	//다운로드 처리도 같은 페이지에서 결과값만 반환받는 @ResponseBody 사용
 	@RequestMapping(value="/download", method=RequestMethod.GET)
 	@ResponseBody
