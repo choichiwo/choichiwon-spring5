@@ -1,15 +1,22 @@
 package com.edu.util;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
@@ -35,6 +42,53 @@ public class CommonUtil {
 	@Inject
 	private IF_MemberService memberService;//스프링빈을 주입받아서(DI) 객체준비
 	
+	//페이지이동이 아닌 같은 페이지에 결과값만 반환하는 @ResponseBody
+	@RequestMapping(value="/image_preview", method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<byte[]> imagePreview(@RequestParam("save_file_name") String save_file_name, HttpServletResponse response) throws Exception {
+		//파일을 입출력할떄는 파일을 byte(이진01001100)형식으로 입출력할떄 발생되는 통로 스트림이 발생
+		FileInputStream fis = null;//출력스트림결과 저장하는 공간
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();//출력통로
+		fis = new FileInputStream(uploadPath + "/" + save_file_name);
+		int readCount = 0;
+		byte[] buffer = new byte[1024];//임시저장소
+		byte[] fileArray = null;
+		//반복문:목적, fis 입력받는 save_file_name 바이트값이(배열) -1일때 까지 반복
+		while((readCount = fis.read(buffer)) != -1) {
+			//입력통로fis에서 출력통로통로 baos보냅니다. 이유는 파일입출력은 byte단위로만 가능.
+			baos.write(buffer, 0, readCount);//(rawData, 종료조건, 반복횟수)
+			//결과는 baos에 누적된 결과가 들어갑니다. -jsp로 보내주면 됩니다.
+		}
+		fileArray = baos.toByteArray();//baos 클래스를  byte[] 배열로 형변환 합니다.
+		fis.close();//메모리 초기화
+		baos.close();//메모리 초기화
+		//fileArray값을 jsp로 보내주는 준비작업, final 이 메서드에만 사용하겠다고 명시.
+		final HttpHeaders headers = new HttpHeaders();
+		//크롬 개발자도구>네트워크>image_preview클릭>헤더탭확인
+		String ext = FilenameUtils.getExtension(save_file_name);
+		//이미지 확장자에 따라서 매칭되는 헤더값이 변해야지만, 이미지 미리보기가 정상으로 보입니다.
+		switch(ext.toLowerCase()) {//선택조건:확장자를 소문자로 바꿔서 비교
+		case "png":
+			headers.setContentType(MediaType.IMAGE_PNG);
+			break;//스위치문 빠져나가기
+		case "jpg":
+			headers.setContentType(MediaType.IMAGE_JPEG);
+			break;//스위치문 빠져나가기
+			
+		case "gif":
+			headers.setContentType(MediaType.IMAGE_GIF);
+			break;//스위치문 빠져나가기
+		case "jpeg":
+			headers.setContentType(MediaType.IMAGE_JPEG);
+			break;//스위치문 빠져나가기
+		case "bmp":	
+			headers.setContentType(MediaType.parseMediaType("image/bmp"));
+			break;//스위치문 빠져나가기
+		default:break;	
+		}
+		
+		//return new ResponseEntity<byte[]>(fileArray);//객체생성시 초기값(rawData,)
+	}
 	//XSS 크로스사이트스크립트 방지용 코드로 파싱하는 메서드(아래)
 	public String unScript(String data) {
 		//if(data == null || data.trim().equals("")) {
