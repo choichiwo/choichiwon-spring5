@@ -131,5 +131,8 @@
           fontSizes: ['8','10','12','14','16','18','20','22','24','26','28','30'],
           fontNamesIgnoreCheck: ['Nanum Gothic']
       });
+      $("form[name='form_write']").on('submit',function(){
+    	  if($('#content'))
+      });
   });
 </script>
