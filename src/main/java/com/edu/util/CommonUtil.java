@@ -60,7 +60,8 @@ public class CommonUtil {
 		File file = new File(uploadPath + "/" + save_file_name);
 		response.setContentType("application/download; utf-8");//아래한글,ppt문서등에서 한글이 꺠지는 것을 방지하는 코드추가
 		real_file_name = URLEncoder.encode(real_file_name);//ie에서 URL한글일떄 에러발생당시 코드 추가
-		return new FileSystemResources();
+		response.setHeader("Content-Disposition", "attachment; filename=" + real_file_name);
+		return new FileSystemResource(file);
 	}
 	
 	//페이지이동이 아닌 같은 페이지에 결과값만 반환하는 @ResponseBody 
