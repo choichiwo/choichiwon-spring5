@@ -112,12 +112,12 @@ $(document).ready(function(){
 			var save_file_name = click_element.parent().find('input[name=save_file_name]').val();
 			$.ajax({
 				type:'post',
-				url:'/file_delete?save_file_name='+save_file_neme,
+				url:'/file_delete?save_file_name='+save_file_name,//컨트롤러구현
 				dataType:"text",//반환받는 데이터 형식
 				success:function(result) {
 					if(result=="success") {
 						click_element.parents(".div_file_delete").remove();
-					}	
+					}
 				},
 				error:function() {
 					alert("RestApi서버가 작동하지 않습니다. 잠시후에 이용해 주세요");
