@@ -57,6 +57,9 @@ public class AdminController {
 	public String board_insert(@RequestParam("file")MultipartFile[] files,BoardVO boardVO) throws Exception {
 		//위 메서드의 BoardVO boardVO 파싱=>내부작동은 다음처럼 됨 @RequestParam("title") String title, @Requestparam("content") String content,@RequestParam("writer") String writer ... 
 		//신규 등록이라서 기존 첨부파일 불러오는 로직은 필요없음.
+		//AttachVO테이블에 가로데이터를 세로데이터로 입력하기 위해서...
+		//save_file_names[] = ["uuid1.jpg","uuid2.jpg"]
+		//real_file_names[] = ["슬라이드1.jpg","슬라이드2.jpg"]
 		String[] save_file_names = new String[files.length];
 		String[] real_file_names = new String[files.length];
 		int index = 0;//첨부파일이 1개이상일때 반복변수로 사용
