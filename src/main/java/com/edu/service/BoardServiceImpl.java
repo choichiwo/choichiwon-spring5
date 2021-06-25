@@ -98,7 +98,7 @@ public class BoardServiceImpl implements IF_BoardService {
 			real_file_name = real_file_names[index];
 			attachVO.setBno(bno);
 			attachVO.setReal_file_name(real_file_name);
-			attachVO.setSave_file_name(real_file_name);
+			attachVO.setSave_file_name(save_file_name);
 			boardDAO.insertAttach(attachVO);
 			index++;//index = index +1;
 		}
