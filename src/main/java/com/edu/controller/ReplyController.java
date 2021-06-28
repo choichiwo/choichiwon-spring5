@@ -1,10 +1,13 @@
 package com.edu.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,6 +47,22 @@ public class ReplyController {
 		dummyMap3.put("reply_text", "댓글테스트1");
 		dummyMap3.put("reply", "admin");
 		dummyMap3.put("bno", 59);
+		//위 Map형 레코드3개를 1개의 List객체로 묶었습니다.(아래)
+		List<Object> dummyMapList = new ArrayList<Object>();
+		dummyMapList.add(0, dummyMap1);
+		dummyMapList.add(1, dummyMap2);
+		dummyMapList.add(2, dummyMap3);
+		//------------------------------------------------------
+		//아래 resultMap을 만든 목적은: 위 List객체를 ResponseEntity객채의 매개변수로 사용.
+		Map<String,Object> resultMap = new HashMap<String,Object>();
+		//아래의 Json데이터형태는 일반컨트롤러에서 사용했던 model사용해서 ("변수명",객체내용) 전송한 방식과 동일
+		resultMap.put("replyList", dummyMapList);
+		//객체를 2개 이상 보내게 되는 상황일떄, Json데이터형태(key:value)로 만들어서 보냅니다.
+		//--------------------------------------------------
+		ResponseEntity<Map<String,Object>> result = null;
+		//result객체를 만든목적: RestApi클라이언트(jsp쪽)으로 resultMap객체를 보낼때 상태값을 같이 보내기 위해서
+		result = new ResponseEntity<Map<String,Object>>(resultMap,HttpStatus.OK);
+		return result;
 		/* json데이터 출력 예 
 		resultMap =
 		[ //ResponseEntity형태는 대괄호는 자료를 묶어서[배열로] 반환합니다.
