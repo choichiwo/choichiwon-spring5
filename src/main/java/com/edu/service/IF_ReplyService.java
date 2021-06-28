@@ -2,6 +2,7 @@ package com.edu.service;
 
 import java.util.List;
 
+
 import com.edu.vo.PageVO;
 import com.edu.vo.ReplyVO;
 
@@ -10,6 +11,7 @@ import com.edu.vo.ReplyVO;
  * @author 최치원
  *
  */
+
 public interface IF_ReplyService {
 	public void deleteReply(ReplyVO replyVO) throws Exception;
 	public void updateReply(ReplyVO replyVO) throws Exception; 

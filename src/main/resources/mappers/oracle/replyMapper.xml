@@ -34,7 +34,7 @@ where bno = #{bno}
 	(#{rno}, #{reply_text}, #{replyer}, systimestamp, #{bno})
 </insert>
 
-<select id="countReply">
+<select id="countReply" resultType="int">
 select count(*) from tbl_reply where bno = #{bno}
 </select>
 
