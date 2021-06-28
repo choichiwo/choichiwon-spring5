@@ -24,8 +24,9 @@ public class ReplyServiceImpl implements IF_ReplyService {
 	@Transactional
 	@Override
 	public void deleteReply(ReplyVO replyVO) throws Exception {
-		// TODO 2개의 DAO를 호출(실해)
+		// TODO 2개의 DAO를 호출(실행)
 		replyDAO.deleteReply(replyVO);
+		// 현재 게시물 고유번호 bno가 필요.
 		replyDAO.replyCountUpdate(replyVO.getBno(), -1);
 	}
 
@@ -35,7 +36,7 @@ public class ReplyServiceImpl implements IF_ReplyService {
 		replyDAO.updateReply(replyVO);
 	}
 
-	@Transactional // All or NotAll 모 아니면 도
+	@Transactional // ALL or NotALL 모 아니면 도
 	@Override
 	public void insertReply(ReplyVO replyVO) throws Exception {
 		// TODO 2개의 DAO를 호출(실행)
@@ -50,9 +51,9 @@ public class ReplyServiceImpl implements IF_ReplyService {
 	}
 
 	@Override
-	public List<ReplyVO> selectReply(PageVO pageVO) throws Exception {
+	public List<ReplyVO> selectReply(Integer bno, PageVO pageVO) throws Exception {
 		// TODO DAO객체 사용
-		return replyDAO.selectReply(pageVO);
+		return replyDAO.selectReply(bno, pageVO);
 	}
 
 }
