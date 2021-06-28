@@ -45,6 +45,13 @@ public class ReplyController {
 		
 		return result;//Restful방식은 항상 반환값이(Body:String, Hasmp-json부분) 존재합니다.
 	}
+	//댓글 삭제를 RestFul로 처리
+	@RequestMapping(value="/reply/reply_delete", method=RequestMethod.DELETE)
+	public ResponseEntity<String> reply_delete() {
+		ResponseEntity<String> result = null;
+		//삭제 기능은 내일부터
+		return result;
+	}
 	//댓글은 Read가 필요없음. 왜냐하면, Select로 가져온 값을 Ajax로 처리하기 때문에 쿼리를 날릴 필요가  없습니다.
 	//그래서, 바로, Update를 처리합니다. -간단하게 update시 Read쿼리가 없고, Ajax처리함.
 	//댓글 등록 @RequestBody는 jsp에서 Ajax메서드로 보내온 값을 받을때 사용하는 애노테이션 입니다.
