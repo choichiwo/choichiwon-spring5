@@ -244,6 +244,7 @@
  $(document).ready(function(){
 	 $("#btn_reply_write").click(function(){
 		//RestAPI엔드포인트로 보낼 값 지정
+		var bno = "${boardVO.bno}";//자바변수값:게시물번호
 		var reply_text = $("#reply_text").val();
 		var replyer = $("#replyer").val();
 		if(reply_text == '' || replyer == '') {//&& and, || or
@@ -252,9 +253,14 @@
 			return false;//더이상 실행없이 콜백함수를 빠져 나갑니다.
 		}
 		$.ajax({
-			url:'',
-			method:'',
-			type:'',
+			type:'post',//컨틀롤러의 method값과 같아야함.
+			url:'/reply/reply_insert',
+			dateType:'text',//RestAPI컨트롤러에서 받는 데이터형식
+			date:{
+				bno:bno,
+				reply_text:reply_text,
+				replyer:replyer
+			},//보내는 데이터 형식 텍스트이지만, 구조는 json형식으로 구성.
 			success:'',
 			error:''
 		});
