@@ -1,16 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ include file="../include/header.jsp" %>
 <style>
 /* 아래 미디어쿼리는 IE10,11에서 지원하는 전용CSS 적용시 사용 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
- .ie_only {height:500px;overflow:auto;}
+ .ie_only {max-height:500px;overflow:auto;}
 }
 </style>
 
- 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -41,7 +40,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <!-- 첨부파일을 전송할때 enctype-필수 없으면, 첨부파일이 정송X -->
+          <!-- 첨부파일을 전송할때 enctype=필수 없으면, 첨부파일이 전송X -->
           <form name="form_view" method="get" action="/admin/board/board_update_form" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
@@ -74,9 +73,9 @@
                 <div class="input-group">
                 <c:forEach begin="0" end="1" var="idx">
 	                <c:if test="${boardVO.save_file_names[idx] != null}">
-		                
-		                  <div class="ie_only" style="">     
-		                 <!-- JSTL의 c:url 태그로 URL감싸주면 인코딩처리됩니다.(한글이 인코딩이됩니다) -->
+	                
+	                  <div class="ie_only" style="">
+	                  	<!-- JSTL의 c:url 태그로 URL감싸주면 인코딩처리됩니다.(한글이 인코딩이됩니다) -->
 	                  	<c:url value="/download" var="url"> 
 						   <c:param name="save_file_name" value="${boardVO.save_file_names[idx]}" />
 						   <c:param name="real_file_name" value="${boardVO.real_file_names[idx]}" /> 
@@ -84,31 +83,31 @@
 						<a href="${url}">
 	                  	<!-- 첨부파일을 URL로 직접접근하지 못하기 때문에 컨트롤러로만 접근이 가능(다운로드전용 메서드생성)IE에서 한글쿼리스트링문제때문에 사용X -->
 	                    <%-- <a href="/download?save_file_name=${boardVO.save_file_names[idx]}&real_file_name=${boardVO.real_file_names[idx]}"> --%>
-		                    ${boardVO.real_file_names[idx]}
-		                    </a>
-		                    <!-- jstl에서 변수사용하기 fn.split('데이터', '분할구분값') 목적: 확장자를 이용해서 이미지 미리보기를 할 건지 결정 img태그사용
-		                    	String[] fileNameArray = String.split('변수값','분할기준값');
-		                    -->
-		                    <c:set var="fileNameArray" value="${fn:split(boardVO.save_file_names[idx],'.')}" />
-		                  	<!-- 그림판.얼굴.코.jpg = 3개배열, 그림판.jpg = 2개배열 -->
-		                  	<c:set var="ectName" value="${fileNameArray[fn:length(fileNameArray)-1]}" />
-		                  	<!-- 그림판.얼굴.jpg 파일을 위 extName = fileNameArray[2] = jpg -->
-		                  	<!-- 자바언어로는 switch ~ case문 -->
-		                  	<!-- containsIgnoreCase('찾을값의구문','비교기준값') -->
-		                  	<c:choose>
-		                  		<c:when test="${fn:containsIgnoreCase(checkImgArray,extName)}">
-		                  		<img src="/image_preview?save_file_name=${boardVO.save_file_names[idx]}" style="width:100%;">
-		                  		</c:when>
-		                  		<c:otherwise>
-		                  			<!-- 아무의미 없이 개발연습용으로 -->
-		                  			<c:out value="${checkImgArray}" /> 이미지가 아님.
-		                  		</c:otherwise>
-		                  	</c:choose>
-		                  </div>  
-		                
+	                    ${boardVO.real_file_names[idx]}
+	                    </a>
+	                    <!-- jstl에서 변수사용하기 fn.split('데이터','분할기준값') 목적: 확장자를 이용해서 이미지 미리보기를 할 건지 결정 img태그사용
+	                    	String[] fileNameArray = String.split('변수값','분할기준값');
+	                    -->
+	                    <c:set var="fileNameArray" value="${fn:split(boardVO.save_file_names[idx],'.')}" />
+	                    <!-- 그림판.얼굴.코.JPG = 3개배열, 그림판.jpg = 2개배열 -->
+	                    <c:set var="extName" value="${fileNameArray[fn:length(fileNameArray)-1]}" />
+	                    <!-- 그림판.얼굴.jpg 파일을 위 변수로 처리시 extName = fineNameArray[2] = jpg -->
+	                    <!-- 자바언어로는 switch ~ case문 ~ default -->
+	                    <!-- containsIgnoreCase('찾을값의문장','비교기준값') -->
+	                    <c:choose>
+	                    	<c:when test="${fn:containsIgnoreCase(checkImgArray,extName)}">
+	                    		<img src="/image_preview?save_file_name=${boardVO.save_file_names[idx]}" style="width:100%;">
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    		<!-- 아무의미 없이 개발연습용으로  -->
+	                    		<c:out value="${checkImgArray}" /> 이미지가 아님.
+	                    	</c:otherwise>
+	                    </c:choose>
+	                  </div>
+	                
 	                </c:if>
-                </c:forEach>
-                </div>
+                </c:forEach> 
+                </div>              
               </div>
             </div>
             <!-- /.card-body -->
@@ -120,8 +119,8 @@
             </div>
             <input name="page" value="${pageVO.page}" type="hidden">
             <input name="search_type" value="${pageVO.search_type}" type="hidden">
-			<%--<input name="search_keyword" value="${pageVO.search_keyword}" type="hidden">--%>            
-			<input name="bno" value="${boardVO.bno}" type="hidden">
+            <%-- <input name="search_keyword" value="${pageVO.search_keyword}" type="hidden"> --%>
+            <input name="bno" value="${boardVO.bno}" type="hidden">
           </form>
         </div>
         
@@ -150,7 +149,7 @@
                 </div>
                 <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                 <button type="button" class="btn btn-warning" id="btn_reply_write">댓글등록</button>
-                <input type="hidden" val=""   id="reply_page">
+                <input type="hidden" value="" id="reply_page">
                 </div>
               </div>
               </div>
@@ -170,7 +169,7 @@
           <div class="time-label">
             <span class="bg-red" data-toggle="collapse" href="#collapseReply" role="button" id="btn_reply_list">
               댓글리스트
-              [<span>${empty boardVO.reply_count?'0':boardVO.reply_count}</span>]
+              [<span id="reply_count">${empty boardVO.reply_count?'0':boardVO.reply_count}</span>]
             </span>
           </div>
           <!-- 콜랩스 시작 -->
@@ -233,27 +232,28 @@
           <!-- END timeline item -->
         </div>
         <!-- //댓글 타임라인 -->
+
         <!-- //콘텐츠 내용 -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
- <%@ include file="../include/footer.jsp" %>
- <script>
- //댓글 리스트 출력 함수
+
+<%@ include file="../include/footer.jsp" %>
+<script>
+//댓글 리스트 출력 함수
 var printReplyList = function(data, templateData, target) {
   //result json데이터를 templateData에 파싱(아래)
   var template = Handlebars.compile(templateData.html());//템플릿을 태그로 변환
 	var html = template(data);//파싱처리
-	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target안쪽의 자식만지움.
+	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target안쪽의 자식만지움
 	target.prepend(html);
 };
 //댓글 하단 페이징을 출력 함수
 var printPagingList = function(pageVO, target) {
-  //스프링RestAPI서버에서 받은 pageVO 오브 target에 파싱합니다.(아래)
-  $(target).html('');// target 의 내용만 지우고, target은 남아있음.
+  //스프링RestAPI서버에서 받은 pageVO 오브젝트 target에 파싱합니다(아래)
+  $(target).html('');// tartget 의 내용만 지우고, target은 남아있음.
 //pageVO = 스프링에서 받은 json데이터, 변수3개 pageVO.prev(이전데이터가 있다면 true), pageVO.next(다음데이터 있다면 true), pageVO=5페이지로 가정
 	var pagination = '';//문자열 누적변수
 	//Previous 출력(아래)
@@ -264,7 +264,7 @@ var printPagingList = function(pageVO, target) {
 	for(var i=0; i<pageVO; i++) {
 		if(i==0) { active = 'active'; } else { active = ''; }
 		pagination += '<li class="paginate_button page-item '+active+'">';
-		pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>'
+		pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>';
 		pagination += '</li>';
 	}
 	//Next 출력(아래)
@@ -274,9 +274,10 @@ var printPagingList = function(pageVO, target) {
 	$(target).append(pagination);
 };
 </script>
- <script>
- $(document).ready(function(){
-	 $("#btn_reply_write").click(function(){
+<script>
+//댓글 CRUD처리
+$(document).ready(function(){
+	$("#btn_reply_write").click(function(){
 		//RestAPI엔드포인트로 보낼 값 지정
 		var bno = "${boardVO.bno}";//자바변수값:게시물번호
 		var reply_text = $("#reply_text").val();
@@ -287,35 +288,37 @@ var printPagingList = function(pageVO, target) {
 			return false;//더이상 실행없이 콜백함수를 빠져 나갑니다.
 		}
 		$.ajax({
-			type:'post',//컨틀롤러의 method값과 같아야함.
+			type:'post',//컨트롤러의 method값과 같아야 함.
 			url:'/reply/reply_insert',
-			dateType:'text',//RestAPI컨트롤러에서 받는 데이터형식
-			date:{
+			dataType:'text',//RestAPI컨트롤러에서 받는 데이터형식
+			data:JSON.stringify({
 				bno:bno,
 				reply_text:reply_text,
 				replyer:replyer
-			},//보내는 데이터 형식 텍스트이지만, 구조는 json형식으로 구성.
-			headers:{
-				"Conret-Type":"application/json",
+			}),//보내는 데이터 자체는 텍스트로 변환됨 단, 구조는 json형식으로 구성.
+			headers:{//보내는 데이터 형식
+				"Content-Type":"application/json",
 				"X-HTTP-Method-Override":"POST"
 			},//json데이터 형식으로 브라우저에 내장된 헤더값을 지정.
-			success:function(result){//댓글 입력이 성공시 실행
-				var reply_count =$("#reply_count").text();//EL에서 초기0
-				$("#reply_count").text(parseInt(replt_count)+1);//011이런식 더해집니다.
-				//댓글을 신규등록 후 댓글 페이징의 1페이지로 이동
+			success:function(result){//댓글 입력이 성공시 실행 
+				var reply_count = $("#reply_count").text();//EL에서 초기0
+				$("#reply_count").text(parseInt(reply_count)+1);//011이런식 더해집니다.
+				//댓글을 신규등록 후 댓글 페이징의 1페이지로 이동하기 위해서
 				$("#reply_page").val("1");//val()로 값을 입력, input태그라는 말.
-				
+				//댓글 입력 후 화면에 댓글 목록 출력하는 함수실행(만들예정)
 			},
-			error:''
+			error:function() {
+				alert("RestAPI서버가 작동하지 않습니다. 잠시 후 이용해 주세요.")
+			}
 		});
-	 });
- });	 
+	});
+});
 </script>
 
 <script>
 //게시물 목록버튼과 게시물 삭제버튼 처리
 $(document).ready(function(){
-	 var form_view = $("form[name='form_view']");//전역변수
+	var form_view = $("form[name='form_view']");//전역변수
 	$("#btn_list").click(function(){
 		//여기서는 함수내 변수
 		form_view.attr("action","/admin/board/board_list");
@@ -326,7 +329,7 @@ $(document).ready(function(){
 			form_view.attr("action","/admin/board/board_delete");
 			form_view.attr("method", "post");
 			form_view.submit();
-		};
+		}
 	});
- });
- </script>
+});
+</script>
