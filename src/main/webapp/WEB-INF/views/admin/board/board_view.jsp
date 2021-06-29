@@ -241,6 +241,30 @@
   <!-- /.content-wrapper -->
 
 <%@ include file="../include/footer.jsp" %>
+<!-- 모달창(초기엔 숨긴상태-수정버튼을 클릭하면 나타나는 창) -->
+<div class="modal fade" id="modal-reply">
+   <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">작성자명</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+         <input class="form-control" type="text" name="modal_reply_text" id="modal_reply_text" value="댓글내용 출력">
+      </div>
+      <div class="modal-footer"><!-- justify-content-between:양쪽배분정렬 -->
+         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+         <button type="button" class="btn btn-primary">수정</button>
+         <button type="button" class="btn btn-danger">삭제</button>
+         <input type="hidden" id="rno" name="rno">
+      </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+<!-- /.modal-dialog -->
+
 <script>
 //댓글 리스트 출력 함수
 var printReplyList = function(data, templateData, target) {
@@ -257,6 +281,7 @@ var printPagingList = function(pageVO, target) {
 //pageVO = 스프링에서 받은 json데이터, 변수3개 pageVO.prev(이전데이터가 있다면 true), pageVO.next(다음데이터 있다면 true), pageVO=5페이지로 가정
 	var pagination = '';//문자열 누적변수
 	//Previous 출력(아래)
+	var prevlink, nextlink;
 	if(pageVO.prev) { prevlink = ''; } else { prevlink = 'disabled'; }
 	pagination += '<li class="paginate_button page-item previous '+prevlink+'" id="example2_previous">';
 	pagination += '<a href="'+(pageVO.startPage-1)+'" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
@@ -370,5 +395,15 @@ $(document).ready(function(){
 			form_view.submit();
 		}
 	});
+});
+</script>
+<script>
+// 댓글 리스트에서 수정 버튼클릭시 현재 선택한 값을 모달창에 보여주는 것을 구현(아래)
+$(document).ready(function(){
+  $('.timeline').on("click", '.div_template',function(){
+    $('#rno').val($(this).attr('data-rno'));
+    $('#modal_reply_text').val($(this).find('.timeline-body').text());
+    $('.modal-title').html($(this).find('.timeline-header').text());
+  });
 });
 </script>
