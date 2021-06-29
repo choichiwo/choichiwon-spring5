@@ -303,6 +303,12 @@ var replyList = function() {
 <script>
 //댓글 CRUD처리
 $(document).ready(function(){
+	//하단 페이징 링크의 링크 속성처리
+	$(".pagination").on("click","li a",function(event){
+		event.preventDefault();//a태그의 링크속성을 사용하지 않겠다.
+		$("#reply_page").val();
+		replyList();
+	});
 	//댓글 리스트 버튼(아래)
 	$("#btn_reply_list").click(function(){
 		replyList();//댓글 리스트 출력 Ajax호출
