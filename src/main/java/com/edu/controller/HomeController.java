@@ -31,10 +31,10 @@ public class HomeController {
 	 * 폼전송시 post(자료숨김), get(자료노출-URL쿼리스트링?있는자료전송)
 	 */
 	//이제부터 일반적인 개발방시 VO->쿼리->DAO->Service(관리자단에서 여기까지끝)
-	//사용자단 컨트롤러->jsp
-	//사용자단 로그인URL 폼호출 GET
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login() throws Exception {
+	//관리자단에서 작성한Service 사용자단에서 그대로 이용, 컨트롤러->jsp
+	//사용자단 로그인URL 폼호출 GET, 로그인
+	@RequestMapping(value = "/login_form", method = RequestMethod.GET)
+	public String login_form() throws Exception {
 		
 		return "home/login";//.jsp생략
 	}
