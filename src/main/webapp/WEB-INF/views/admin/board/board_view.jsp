@@ -332,7 +332,10 @@ var replyList = function() {
 //댓글 CRUD처리
 $(document).ready(function(){
 	//댓글 모달창 삭제버튼의 액션처리
-	$("#btn_reply_delete").click(function(){});
+	$("#btn_reply_delete").click(function(){
+		//댓글을 삭제할떄 필요한 변수확인 2개 rno(삭제쿼리사용), bno(게시물댓글카운트업데이트에사용)
+		var rno = $("")
+	});
 	//댓글 모달창 수정버튼의 액션처리
 	$("#btn_reply_update").click(function(){
 		//댓글을 수정할때 필요한 변수확인
@@ -409,7 +412,8 @@ $(document).ready(function(){
 				$("#reply_count").text(parseInt(reply_count)+1);//011이런식 더해집니다.
 				//댓글을 신규등록 후 댓글 페이징의 1페이지로 이동하기 위해서
 				$("#reply_page").val("1");//val()로 값을 입력, input태그라는 말.
-				//댓글 입력 후 화면에 댓글 목록 출력하는 함수실행(만들예정)
+				//댓글 입력 후 화면에 댓글 목록 출력하는 함수실행
+				replyList();
 			},
 			error:function() {
 				alert("RestAPI서버가 작동하지 않습니다. 잠시 후 이용해 주세요.")
