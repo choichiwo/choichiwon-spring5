@@ -349,6 +349,7 @@ $(document).ready(function(){
 					$("#modal-reply").modal("hide");
 					var reply_count = $("#reply_count").text();//Get
 					$("#reply_count").text(parseInt(reply_count)-1);//Set
+					$("#reply_page").val("1");//댓글을 삭제 후 1페이지로 이동
 					replyList();
 				}
 			},
