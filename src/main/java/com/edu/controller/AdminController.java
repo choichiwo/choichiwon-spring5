@@ -55,7 +55,7 @@ public class AdminController {
 	//게시물 등록을 POST로 처리 합니다.
 	@RequestMapping(value="/admin/board/board_insert", method=RequestMethod.POST)
 	public String board_insert(@RequestParam("file")MultipartFile[] files,BoardVO boardVO) throws Exception {
-		//위 메서드의 BoardVO boardVO 파싱=>내부작동은 다음처럼 됨 @RequestParam("title") String title, @Requestparam("content") String content,@RequestParam("writer") String writer ... 
+		//위 메서드의 BoardVO boardVO 파싱=>내부작동은 다음처럼 됨 @RequestParam("title") String title, @RequestParam("content") String content, @RequestParam("writer") String writer ...
 		//신규 등록이라서 기존 첨부파일 불러오는 로직은 필요없음.
 		//AttachVO테이블에 가로데이터를 세로데이터로 입력하기 위해서...
 		//save_file_names[] = ["uuid1.jpg","uuid2.jpg"]
@@ -292,6 +292,8 @@ public class AdminController {
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			String encPassword = passwordEncoder.encode(rawPassword);
 			memberVO.setUser_pw(encPassword);
+			//스프링시큐리티 내장클래스에서 user_pw(admin1234)와 password(해시값)비교함수
+			//passwordEncoder.matches("admin1234", password);
 		}
 		memberService.updateMember(memberVO);//반환값이 없습니다.
 		//redirect로 페이지를 이동하면, model로 담아서 보낼수 없습니다. 쿼리스트링(URL?)으로 보냅니다.
