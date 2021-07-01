@@ -116,8 +116,8 @@ $(document).ready(function() {
 					</li>
 				</ul>
 				<p class="btn_line">
-				<button type="submit" class="btn_baseColor">정보수정</button>
-				<button type="button" class="btn_baseColor" id="btn_exit">회원탈퇴</button>
+				<button type="submit" class="btn_baseColor" style="cursor: pointer;">정보수정</button>
+				<button type="button" class="btn_baseColor" id="btn_leave" style="cursor: pointer;">회원탈퇴</button>
 				</p>	
 			</fieldset>
 		</form>
@@ -128,3 +128,13 @@ $(document).ready(function() {
 <!-- //메인콘텐츠영역 -->
 
 <%@ include file="../include/footer.jsp" %>
+<script>
+$(document).ready(function(){
+	$("#btn_leave").click(function(){
+		//alert("삭제버튼 준비중 입니다");
+		var form_leave = $("form[name='join_form']");
+		alert($("select[name='enabled']").val());
+		//위 값을 false, 0둘중 1개 로 변경 후 submit예정.
+	});
+});
+</script>
