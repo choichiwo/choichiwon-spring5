@@ -68,7 +68,10 @@ if("${msg}" != "") {
 					<li><a href="#">${session_username} 님 환영합니다.</a></li>
 					<li><a href="/logout">로그아웃</a></li>
 					<li><a href="mypage.html">마이페이지</a></li>
+					<!-- ROLE_ADMIN 권한만 AdminLTE에 가능하게 조건추가 -->
+					<c:if test="${session_levels eq 'ROLE_ADMIN'}">
 					<li><a href="/admin">AdminLTE</a></li>
+					</c:if>
 					</c:when>						
 					<c:otherwise>
 						<li><a href="/login_form">로그인</a></li>
