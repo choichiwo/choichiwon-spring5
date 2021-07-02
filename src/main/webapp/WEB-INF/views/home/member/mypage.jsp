@@ -133,7 +133,9 @@ $(document).ready(function(){
 	$("#btn_leave").click(function(){
 		//alert("삭제버튼 준비중 입니다");
 		var form_leave = $("form[name='join_form']");
-		alert($("select[name='enabled']").val());
+		//$("select[name='enabled']").val(false);//에러Set input태그
+		$("select[name='enabled']").html("<option value='false'>탈퇴</option>");//select Set
+		alert($("select[name='enabled']").val());//Get
 		//위 값을 false, 0둘중 1개 로 변경 후 submit예정.
 	});
 });
