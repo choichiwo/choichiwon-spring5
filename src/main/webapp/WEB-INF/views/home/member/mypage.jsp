@@ -138,9 +138,10 @@ $(document).ready(function(){
 			//$("select[name='enabled']").html("<option value='false'>탈퇴</option>");//select Set
 			alert($("select[name='enabled']").val());//Get
 			//위 값을 false, 0둘중 1개 로 변경 후 submit예정.
+			form_leave.attr("action","/member/mypage_leave");//크롬오동작으로 추가한 코드
 			form_leave.submit();//삭제는 아니고,enabled 필드값을 수정합니다.
 			//탈퇴를 했다면, 로그아웃처리도 같이 되어야 함.
-			location.replace("/logout");
+			//location.replace("/logout");//크롬에서는 오동작해서 자바스크립트처릐는 않함.
 		}
 	});
 });
