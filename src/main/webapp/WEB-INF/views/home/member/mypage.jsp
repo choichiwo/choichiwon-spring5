@@ -103,7 +103,7 @@ $(document).ready(function() {
 					<li class="clear">
 						<label for="gender_lbl" class="tit_lbl pilsoo_item">권한여부</label>
 						<div class="app_content radio_area">
-							<select name="levels2" class="gender" required>
+							<select name="levels" class="gender" required>
 								<option value="${memberVO.levels}">${memberVO.levels}</option>
 							</select>
 						</div>
@@ -116,8 +116,8 @@ $(document).ready(function() {
 					</li>
 				</ul>
 				<p class="btn_line">
-				<button type="submit" class="btn_baseColor" style="cursor: pointer;">정보수정</button>
-				<button type="button" class="btn_baseColor" id="btn_leave" style="cursor: pointer;">회원탈퇴</button>
+				<button type="submit" class="btn_baseColor" style="cursor:pointer;">정보수정</button>
+				<button type="button" class="btn_baseColor" id="btn_leave" style="cursor:pointer;">회원탈퇴</button>
 				</p>	
 			</fieldset>
 		</form>
@@ -132,17 +132,18 @@ $(document).ready(function() {
 $(document).ready(function(){
 	$("#btn_leave").click(function(){
 		if(confirm('정말로 탈퇴하시겠습니까?')) {
-			//alert("삭제버튼 준비중 입니다");
+			//alert("삭제버튼 준비중 입니다.");
 			var form_leave = $("form[name='join_form']");
 			$("option:eq(0)","select[name='enabled']").val("false");//Set
 			//$("select[name='enabled']").html("<option value='false'>탈퇴</option>");//select Set
-			alert($("select[name='enabled']").val());//Get
-			//위 값을 false, 0둘중 1개 로 변경 후 submit예정.
+			//alert($("select[name='enabled']").val());//Get
+			//위 값을 false, 0 둘중 1개 로 변경 후 submit예정.
 			form_leave.attr("action","/member/mypage_leave");//크롬오동작으로 추가한 코드
-			form_leave.submit();//삭제는 아니고,enabled 필드값을 수정합니다.
+			form_leave.submit();//삭제는 아니고, enabled 필드값을 수정합니다.
 			//탈퇴를 했다면, 로그아웃처리도 같이 되어야 함.
-			//location.replace("/logout");//크롬에서는 오동작해서 자바스크립트처릐는 않함.
+			//location.replace("/logout");//크롬에서는 오동작해서 자바스크립트처리는 않함.
 		}
+		
 	});
 });
 </script>
