@@ -43,14 +43,15 @@ public class HomeController {
 	private IF_MemberService memberService;
 	
 	//회원가입 처리 호출 POST방식
-	@RequestMapping(value="/join", method=RequestMethod.POST)
+	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public String join(MemberVO memberVO, RedirectAttributes rdat) throws Exception {
+		//jsp폼에서 levels를 ROLE_ADMIN으로 해킹할까봐 여기서 강제로 입력 취소
 		memberService.insertMember(memberVO);
 		rdat.addFlashAttribute("msg", "회원가입");//회원가입 가(이) 성공했습니다. 출력
 		return "redirect:/login_form";//페이지 리다이렉트로 이동
 	}
 	//회원가입폼 호출 Get방식
-	@RequestMapping(value="/join_form", method=RequestMethod.GET)
+	@RequestMapping(value="/join_form",method=RequestMethod.GET)
 	public String join_form() throws Exception {
 		
 		return "home/join";//.jsp생략
@@ -62,11 +63,11 @@ public class HomeController {
 		//rdat.addFlashAttribute("msg", "회원탈퇴");//스프링내장된logout을 사용시X
 		return "redirect:/logout";
 	}
-	//마이페이지 회원정보수정 POST방식. 처리 후 msg를 히든값으로 jsp로 전성합니다.
+	//마이페이지 회원정보수정 POST방식. 처리 후 msg를 히든값으로 jsp로 전송합니다.
 	@RequestMapping(value="/member/mypage", method=RequestMethod.POST)
 	public String mypage(MemberVO memberVO, RedirectAttributes rdat) throws Exception {
-		//암호를 인코딩 처리합니다. 조건, 단, 암호를 변경하는 값이 있을때 
-		if(memberVO.getUser_pw().isEmpty()) {
+		//암호를 인코딩 처리합니다. 조건, 암호를 변경하는 값이 있을때
+		if(!memberVO.getUser_pw().isEmpty()) {
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			String rawPassword = memberVO.getUser_pw();
 			memberVO.setUser_pw(passwordEncoder.encode(rawPassword));
@@ -82,6 +83,7 @@ public class HomeController {
 		//jsp에서 발생된 세션을 가져오려고 하기 때문에 HttpServletRequest객체가 사용됩니다.
 		HttpSession session = request.getSession();//싱클톤 객체
 		String user_id = (String) session.getAttribute("session_userid");
+		//memberService에서 1개의 레코드를 가져옵니다. model담아서 jsp로 보냅니다.
 		model.addAttribute("memberVO", memberService.readMember(user_id));
 		return "home/member/mypage";//.jsp생략
 	}
