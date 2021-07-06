@@ -44,13 +44,14 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var="boardVO" items="${boardList}">
+				<c:forEach var="boardVO" items="${boardList}" varStatus="status">
 					<tr>
 						<td>
-						<!-- 전체게시물-(현재페이지x1페이지당보여줄개수)+1페이지당보여줄개수-현재인덱스 -->
-						${boardVO.bno}
+						<!-- 전체게시물-(현재페이지x1페이지당보여줄개수)+1페이지당보여줄개수-현재인덱스(위부터0) -->
+						${pageVO.totalCount-(pageVO.page*pageVO.queryPerPageNum)+pageVO.queryPerPageNum-status.index}
 						</td>
-						<td class="tit_notice"><a href="#">
+						<td class="tit_notice">
+						<a href="home/board/board_view?bno=${boardVO.bno}&page=${pageVO.page}&">
 						${boardVO.title}
 						</a> </td>
 						<td>${boardVO.view_count}</td>
