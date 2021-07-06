@@ -59,7 +59,7 @@ public class HomeController {
 		}
 		//pageVO의 2개변수값울 필수로 입력해야지만 페이징처리가 가능
 		pageVO.setQueryPerPageNum(5);
-		pageVO.setPerPageNum(1);
+		pageVO.setPerPageNum(5);
 		int totalCount = boardService.countBoard(pageVO);
 		pageVO.setTotalCount(totalCount);//여기에서 prev,next변수값이 발생됨
 		List<BoardVO> boardList = boardService.selectBoard(pageVO);
