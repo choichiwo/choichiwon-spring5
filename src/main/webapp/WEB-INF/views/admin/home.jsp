@@ -46,7 +46,7 @@
             <ul class="users-list clearfix">
             <!-- 최신 등록한 회원정보 4개출력-반복문사용 -->
             <c:forEach var="memberVO" items="${latestMembers}">
-            	<li style="cursor: pointer;" onclick="alert('해당회원정보로 이동합니다.준비중');">
+            	<li style="cursor: pointer;" onclick="location.replace('/admin/member/member_view?user_id=${memberVO.user_id}')">
                 	<img src="/resources/admin/dist/img/default-150x150.png" alt="User Image">
                 	<a class="users-list-name" href="#">${memberVO.user_name}</a>
                 	<span class="users-list-date">
@@ -60,7 +60,7 @@
           </div>
           <!-- /.card-body -->
           <div class="card-footer text-center">
-            <a href="javascript:alert('회원목록으로이동-준비중');">View All Users</a>
+            <a href="/admin/member/member_list">View All Users</a>
           </div>
           <!-- /.card-footer -->
         </div>
