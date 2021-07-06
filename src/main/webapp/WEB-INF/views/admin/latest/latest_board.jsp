@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!-- 헤더,푸터가 필요없음. 페이지안쪽에 내용만 출력할 예정 -->
 <div class="card">
   <div class="card-header border-transparent">
@@ -22,7 +22,7 @@
       <table class="table m-0">
         <thead>
         <tr>
-          <th>제목</th>
+          <th>제목[댓글수]</th>
           <th>작성자</th>
           <th>조회수</th>
           <th>작성일</th>
@@ -30,8 +30,10 @@
         </thead>
         <tbody>
         <c:forEach var="boardVO" items="${latestBoard}">
-	        <tr>
-	          <td><a href="/admin/board/board_view?bno=${boardVO.bno}&page=1">${boardVO.title}</a></td>
+        	<tr>
+	          <td><a href="/admin/board/board_view?bno=${boardVO.bno}&page=1">
+	          ${boardVO.title}[${boardVO.reply_count}]
+	          </a></td>
 	          <td>${boardVO.writer}</td>
 	          <td><span class="badge badge-success">${boardVO.view_count}</span></td>
 	          <td>
@@ -40,9 +42,7 @@
 	            </div>
 	          </td>
 	        </tr>
-        </c:forEach>
-        
-        
+        </c:forEach>       
         </tbody>
       </table>
     </div>
