@@ -1,5 +1,6 @@
 package com.edu.controller;
 
+import java.io.File;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -28,7 +29,6 @@ import com.edu.vo.AttachVO;
 import com.edu.vo.BoardVO;
 import com.edu.vo.MemberVO;
 import com.edu.vo.PageVO;
-import com.sun.java.util.jar.pack.Package.File;
 
 /**
  * 이 클래스는 MVC웹프로젝트를 최초로 생성시 자동으로 생성되는 클래스
@@ -73,7 +73,7 @@ public class HomeController {
 		//첨부파일 있으면 삭제
 		for(AttachVO file:delFiles) {//향상된 for문에서 실행조건이 필요없이
 			File target = null;//내일 이어 작업.
-		}		
+		}
 		rdat.addFlashAttribute("msg", "게시물 삭제");//성공시 메세지 출력용 변수
 		return "redirect:/home/board/board_list";//성공시 이동할 주소
 	}
