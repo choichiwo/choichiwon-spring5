@@ -25,7 +25,9 @@
             <li class="bbs_title">첨부파일:
             <c:forEach begin="0" end="1" var="idx">
             	<c:if test="${boardVO.real_file_names[idx] != null}">
-            		  ${boardVO.real_file_names[idx]}	
+            		 <a href="/download">다운로드
+            		 ${boardVO.real_file_names[idx]}
+            		 </a>	
             	</c:if> 
             </c:forEach>
             </li>
