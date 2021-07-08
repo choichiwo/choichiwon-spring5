@@ -31,12 +31,11 @@
 					</li>
 					<li class="clear">
 						<label for="file_lbl" class="tit_lbl">첨부파일</label>
-						<br>
 						<c:forEach begin="0" end="1" step="1" var="idx">
 							<div class="custom-file" style="width:96%;margin:0 2%;">
 								<input type="file" name="file" class="custom-file-input" id="customFile_${idx}">
 								<label class="custom-file-label" for="customFile" style="color:#999;">파일첨부${idx}</label>
-								<div class="text-right mb-2">
+								<div class="text-right">
 								<c:if test="${!empty boardVO.save_file_names[idx]}">
 									<c:url var="url" value="/download">
 				            			<c:param name="save_file_name" value="${boardVO.save_file_names[idx]}" />
@@ -48,7 +47,7 @@
 								</c:if>
 								</div>
 							</div>
-							
+							<br><br>
 							<div style="height:10px;"></div>
 						</c:forEach>
 					</li>
