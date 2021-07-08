@@ -57,7 +57,7 @@ $(document).ready(function() {
 			<fieldset>
 				<legend>회원가입폼</legend>
 				<p class="info_pilsoo pilsoo_item">
-				필수입력(회원가입 후 관리자가 승인해 줘야만, 로그인이가능합니다.)
+				필수입력(회원가입 후 관리자가 승인해 줘야만, 로그인이 가능합니다!)
 				</p>
 				<ul class="app_list">
 					<li class="clear">
@@ -128,9 +128,9 @@ $(document).ready(function(){
 			$.ajax({
 				type:"get",
 				url:"/id_check_2010?user_id="+$(this).val(),
-				dataType:"json",
+				dataType:"json",//전송받는 데이터형
 				success:function(result) {
-					//alert(result.memberCnt); //JSON.stringify(result)
+					//alert(result.memberCnt);//JSON.stringify(result)
 					if(result.memberCnt == 0) {//중복ID가 존재하지 않으면
 						$("#btn_insert").attr("disabled",false);
 						$("#btn_insert").css("opacity","1");

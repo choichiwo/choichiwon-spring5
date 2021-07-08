@@ -55,14 +55,14 @@ public class CommonUtil {
 	public String getUploadPath() {
 		return uploadPath;
 	}
-	
-	//첨부파일 개별삭제 Ajax로 받아서 처리, @ResponseBodt사용
+
+	//첨부파일 개별삭제 Ajax로 받아서 처리, @ResponseBody사용
 	@RequestMapping(value="/file_delete", method=RequestMethod.POST)
 	@ResponseBody
-	public String file_delete(@RequestParam("save_file_name")String save_file_name) {//Ajax는 예외처리를 스프링에 던지지 암ㅎ고, try~catch문으로 처리.
+	public String file_delete(@RequestParam("save_file_name")String save_file_name) { //Ajax는 예외처리를 스프링에 던지지 않고, try~catch문으로 처리.
 		String result = "";//Ajax로 보내는 값변수
 		try {
-			boardDAO.deleteAttach(save_file_name);//DB에서 삭제
+			boardDAO.deleteAttach(save_file_name);
 			File target = new File(uploadPath + "/" + save_file_name);
 			if(target.exists()) {
 				target.delete();
@@ -79,8 +79,8 @@ public class CommonUtil {
 	public FileSystemResource download(@RequestParam("save_file_name")String save_file_name, @RequestParam("real_file_name")String real_file_name, HttpServletResponse response) throws Exception {
 		//FileSyste...은 스프링 코어에서 제공하는 전용 파일처리 클래스
 		File file = new File(uploadPath + "/" + save_file_name);
-		response.setContentType("application/download; utf-8");//아래한글,ppt문서등에서 한글이 꺠지는 것을 방지하는 코드추가
-		real_file_name = URLEncoder.encode(real_file_name);//ie에서 URL한글일떄 에러발생당시 코드 추가
+		response.setContentType("application/download; utf-8");//아래한글,ppt문서등에서 한글내용이 깨지는 것을 방지하는 코드추가
+		real_file_name = URLEncoder.encode(real_file_name);//ie에서 URL한글일때 에러발생방시 코드 추가
 		response.setHeader("Content-Disposition", "attachment; filename=" + real_file_name);
 		return new FileSystemResource(file);
 	}
@@ -128,7 +128,7 @@ public class CommonUtil {
 			break;
 		default:break;
 		}
-
+		
 		return new ResponseEntity<byte[]>(fileArray,headers,HttpStatus.CREATED);//객체생성시 초기값(rawData,헤더정보,HTTP상태값)
 	}
 	//XSS 크로스사이트스크립트 방지용 코드로 파싱하는 메서드(아래)
@@ -165,7 +165,7 @@ public class CommonUtil {
 		return checkImgArray;
 	}
 	
-	//RestAPI서버 맛보기ID중복체크(제대로 만들면 @RestController 사용)
+	//관리자단에서 사용:RestAPI서버 맛보기ID중복체크(제대로 만들면 @RestController 사용)
 	@RequestMapping(value="/id_check", method=RequestMethod.GET)
 	@ResponseBody //반환받은 값의 헤더값을 제외하고, 내용(body)만 반환하겠다는 명시
 	public String id_check(@RequestParam("user_id")String user_id) throws Exception {
@@ -180,17 +180,17 @@ public class CommonUtil {
 		}
 		return memberCnt;//0.jsp 이렇게 작동하지 않습니다. 이유는 @ResponseBody때문이고, RestAPI는 값만 반환
 	}
-	//사용자단에서 사용: JsonView방식으로 RestApi를 구현 실습
+	//사용자단에서 사용: JsonView방식으로 RestApi를 구현실습
 	@RequestMapping(value="/id_check_2010",method=RequestMethod.GET)
 	public String id_check_2010(@RequestParam("user_id")String user_id,Model model) throws Exception {
 		String memberCnt = "1";//중복ID가 있는것을 기본값으로 지정
 		if(!user_id.isEmpty()) {
 			MemberVO memberVO = memberService.readMember(user_id);
-			if(memberVO ==null) {//중복ID가 없다면
+			if(memberVO == null) {//중복ID가 없다면
 				memberCnt = "0";
 			}
 		}
-		model.addAttribute("memberCnt", memberCnt);		
+		model.addAttribute("memberCnt", memberCnt);//자바List,VO,String객체를 json객체로 반환함.
 		return "jsonView";//jsp파일명 대신에 servlet에서 정의한 스프링빈 ID명을 적으면, json객체로 결과를 반환합니다.
 	}
 
