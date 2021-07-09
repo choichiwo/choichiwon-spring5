@@ -191,6 +191,31 @@
 
 <!-- 댓글 하단의 페이징처리용 변수값지정 -->
 <input id="reply_page" value="1" type="hidden">
+<!-- 모달창(초기엔 숨긴상태modal-display:none, fade-opacity:0-수정버튼을 클릭하면 나타나는 창) -->
+<div class="modal fade" id="modal-reply">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">작성자명</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<input class="form-control" type="text" name="modal_reply_text" id="modal_reply_text" value="댓글내용 출력">
+		</div>
+		<div class="modal-footer"><!-- justify-content-between:양쪽배분정렬 -->
+			<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+			<button id="btn_reply_update" type="button" class="btn btn-primary">수정</button>
+			<button id="btn_reply_delete" type="button" class="btn btn-danger">삭제</button>
+			<input type="hidden" id="rno" name="rno">
+		</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 <!-- //메인콘텐츠영역 -->
 <%@ include file="../include/footer.jsp" %>
@@ -392,24 +417,6 @@ $(document).ready(function(){
 });
 </script>
 
-<script>
-//게시물 목록버튼과 게시물 삭제버튼 처리
-$(document).ready(function(){
-	var form_view = $("form[name='form_view']");//전역변수
-	$("#btn_list").click(function(){
-		//여기서는 함수내 변수
-		form_view.attr("action","/admin/board/board_list");
-		form_view.submit();
-	});
-	$("#btn_delete").click(function(){
-		if(confirm('정말로 삭제 하시겠습니까?')) {//Yes를 클릭하면 아래내용 실행
-			form_view.attr("action","/admin/board/board_delete");
-			form_view.attr("method", "post");
-			form_view.submit();
-		}
-	});
-});
-</script>
 <script>
 // 댓글 리스트에서 수정 버튼클릭시 현재 선택한 값을 모달창에 보여주는 것을 구현(아래)
 $(document).ready(function(){

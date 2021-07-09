@@ -16,7 +16,7 @@
 				-->
 				 
 				 <value>classpath:/properties/cloud.properties</value>
-								
+							
 			</list>
 		</property>
 	</bean>
@@ -111,5 +111,8 @@
 	<bean id="uploadPath" class="java.lang.String">
 		<constructor-arg value="${UploadPath}" />
 	</bean>
+	
+	<!-- 스케줄링 스프링 빈 생성 -->
+	
 	
 </beans>
