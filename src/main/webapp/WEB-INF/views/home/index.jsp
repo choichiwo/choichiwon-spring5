@@ -90,12 +90,23 @@ $(document).ready(function() {
 			</a></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
-					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">
-							<img class="img_topplace" src="/resources/home/img/no_image.png" alt="OOOO OOOOO" style="opacity:0.7;"/>
-							<h3>OOOO OOOOO</h3>
-							<p class="txt">OOOO OOOOOOOOO OOOOOOOOO OOOOOOOOO OOOOOOOOO OOOOOOOOO OOOOOOOOO OOOOO!</p>
-							<span class="view">VIEW</span></a>
+				<c:forEach var="galleryVO" items="${latestGallery}">
+					<!-- 게시판종류 board_type값은 세션이지만, 여기서 최초로 세션을 발생시켜야 합니다. -->
+					<li><a href="/home/board/board_view?bno=${galleryVO.bno}&page=1&board_type=gallery">
+						<c:choose>
+							<c:when test="${empty galleryVO.save_file_names[0]}">
+								<img class="img_topplace" src="/resources/home/img/no_image.png" alt="OOOO OOOOO" style="opacity:0.7;"/>
+							</c:when>
+							<c:otherwise>
+								<img class="img_topplace" src="/image_preview?save_file_name=${galleryVO.save_file_names[0]}" alt="OOOO OOOOO" style="opacity:0.7;"/>
+							</c:otherwise>
+						</c:choose>
+							<h3>${galleryVO.title}</h3>
+							<p class="txt">${galleryVO.content}</p>
+							<span class="view">VIEW</span>
+						</a>
 					</li>
+				</c:forEach>					
 					
 				</ul>
 			</div>
@@ -111,9 +122,17 @@ $(document).ready(function() {
 					<a href="javascript:;">전화 상담 신청</a>
 				</p>
 				<div class="bbs_line">
-					<h3>NOTICE</h3>
+					<h3><a href="/home/board/board_list?board_type=notice&search_keyword=">
+					NOTICE
+					</a></h3>
 					<ul class="notice_recent">
-						<li><a href="javascript:;">OOOO OOOOO (스프링OOOO OOOOO)</a></li>
+					<c:forEach var="noticeVO" items="${latestNotice}">
+						<li>
+						<a href="/home/board/board_view?bno=${noticeVO.bno}&page=1&board_type=notice">
+						${noticeVO.title}
+						</a>
+						</li>
+					</c:forEach>				
 						
 					</ul>
 				</div>
