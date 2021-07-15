@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -274,7 +275,10 @@ public class AdminController {
 	}
 	//아래 경로는 회원신규등록을 처리하는 서비스를 호출하는 URL
 	@RequestMapping(value="/admin/member/member_insert", method=RequestMethod.POST)
-	public String insertMember(PageVO pageVO,MemberVO memberVO) throws Exception {
+	public String insertMember(HttpServletRequest request,MultipartFile file,PageVO pageVO,MemberVO memberVO) throws Exception {
+		if(!file.getOriginalFilename().isEmpty()) {
+			commonUtil.profile_upload(memberVO.getUser_id(),request,file);
+		}
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String rawPassword = memberVO.getUser_pw();//원시 패스워드값
 		String encPassword = passwordEncoder.encode(rawPassword);
@@ -376,7 +380,7 @@ public class AdminController {
 	//메인페이지 또는 대시보드에 최신 테이블리스트를 출력하는 방법 2가지(위,model사용
 	//아래, <c:import방식 : 최신 게시물용도로 사용 //페이지안에서 컴파일된 다른 페이지를 불러올 수 있음. 개발자B 작업
 	@RequestMapping(value="/admin/latest/latest_board",method=RequestMethod.GET)
-	public String latest_board(@RequestParam(value="board_name",required=false) String board_name,@RequestParam(value="board_type",required=false) String board_type,Model model) throws Exception {
+	public String latest_board(@RequestParam(value="board_name",required=false) String board_name, @RequestParam(value="board_type",required=false) String board_type,Model model) throws Exception {
 		PageVO pageVO = new PageVO();
 		pageVO.setPage(1);
 		pageVO.setQueryPerPageNum(5);
